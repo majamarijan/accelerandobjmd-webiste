@@ -69,12 +69,32 @@ html.plugin-blog.blog-post-page code {
 	@apply bg-light-green text-xs font-mono;
 }
 
+html.blog-tags-post-list-page.plugin-blog header,
+html.blog-list-page.plugin-blog[class*='plugin-id-articles'] header {
+	@apply flex flex-col text-sm place-items-end;
+}
+
+html.blog-tags-post-list-page.plugin-blog header div:last-of-type,
+html.blog-list-page.plugin-blog[class*='plugin-id-articles'] header div:last-of-type {
+	@apply place-self-start grid;
+}
+
+html.blog-tags-post-list-page.plugin-blog header h2 a,
+html.blog-list-page.plugin-blog[class*='plugin-id-articles'] header h2 {
+	@apply text-3xl text-center;
+}
+
 html.plugin-blog.blog-post-page article .markdown .abstract {
-	@apply flex flex-col md:flex-row mt-12 gap-4 items-start;
+	@apply grid grid-cols-1 md:grid-cols-[300px_1fr] gap-4 items-start my-12;
 }
 
 html.plugin-blog.blog-post-page article .markdown .abstract p {
-	@apply text-sm leading-6;
+	@apply text-sm leading-6 text-pretty;
+}
+
+
+html.plugin-blog.blog-post-page article .markdown .abstract .citation p {
+	@apply text-xs;
 }
 
 html.plugin-blog.blog-post-page article .markdown p {
@@ -90,7 +110,10 @@ html.plugin-blog.blog-post-page article .markdown .text p {
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .figureBox figure {
-	@apply max-w-screen-sm mx-auto m-0;
+	@apply max-w-screen-sm mx-auto m-0 grid grid-rows-[1fr_100px] place-items-stretch;
+	img {
+		@apply object-cover;
+	}
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .figureBox {
@@ -122,11 +145,27 @@ html.plugin-blog.blog-post-page
 	figure
 	figcaption
 	p {
-	@apply text-xs;
+	@apply text-xs italic;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .references {
-	@apply text-sm max-w-screen-sm;
+	@apply text-sm max-w-screen-sm pb-12;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .references ol {
+	@apply flex flex-col gap-3;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .additional_resources p {
+	@apply flex flex-col text-xs md:text-sm;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text  .poetry {
+	@apply max-w-screen-sm;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text  .poetry code {
+	@apply bg-slate-100 text-xs italic;
 }
 
 html.plugin-blog.blog-post-page article .markdown .up {
@@ -186,9 +225,9 @@ html.plugin-blog.blog-post-page article .markdown {
 	@apply px-2 sm:px-8 lg:px-2;
 }
 
-html.plugin-blog.blog-post-page article img {
+html.plugin-blog.blog-post-page.plugin-id-default article img {
 	width: 100%;
-	/* max-width: 115px; */
+	max-width: 115px;
 }
 
 @layer base {
