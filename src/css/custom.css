@@ -75,7 +75,9 @@ html.blog-list-page.plugin-blog[class*='plugin-id-articles'] header {
 }
 
 html.blog-tags-post-list-page.plugin-blog header div:last-of-type,
-html.blog-list-page.plugin-blog[class*='plugin-id-articles'] header div:last-of-type {
+html.blog-list-page.plugin-blog[class*='plugin-id-articles']
+	header
+	div:last-of-type {
 	@apply place-self-start grid;
 }
 
@@ -83,7 +85,6 @@ html.blog-tags-post-list-page.plugin-blog header h2 a,
 html.blog-list-page.plugin-blog[class*='plugin-id-articles'] header h2 {
 	@apply text-3xl text-center;
 }
-
 
 html.plugin-blog.blog-post-page article .markdown {
 	@apply px-2 md:px-4 lg:px-2;
@@ -100,7 +101,6 @@ html.plugin-blog.blog-post-page article .markdown .abstract {
 html.plugin-blog.blog-post-page article .markdown .abstract p {
 	@apply text-sm leading-6 text-pretty;
 }
-
 
 html.plugin-blog.blog-post-page article .markdown .abstract .citation p {
 	@apply text-xs;
@@ -157,6 +157,10 @@ html.plugin-blog.blog-post-page
 	@apply text-xs italic;
 }
 
+html.plugin-blog.blog-post-page article .markdown .text .ol_list {
+	@apply flex flex-col my-8;
+}
+
 html.plugin-blog.blog-post-page article .markdown .text .references {
 	@apply text-xs text-pretty md:text-sm max-w-screen-sm pb-12;
 }
@@ -165,7 +169,12 @@ html.plugin-blog.blog-post-page article .markdown .text .references ol {
 	@apply flex flex-col gap-3;
 }
 
-html.plugin-blog.blog-post-page article .markdown .text .additional_resources p {
+html.plugin-blog.blog-post-page
+	article
+	.markdown
+	.text
+	.additional_resources
+	p {
 	@apply flex flex-col text-xs md:text-sm;
 }
 
@@ -179,6 +188,10 @@ html.plugin-blog.blog-post-page article .markdown .text .poetry {
 
 html.plugin-blog.blog-post-page article .markdown .text .poetry code {
 	@apply bg-slate-100 text-xs italic;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text blockquote {
+	@apply my-12;
 }
 
 html.plugin-blog.blog-post-page article .markdown .up {
