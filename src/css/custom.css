@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--ifm-background-color: #e9efec;
+	--ifm-text-color: #181c14;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+	--ifm-background-color: #181c14;
+	--ifm-text-color: #e9efec;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+html .navbar__link,
+html .navbar__brand {
+	@apply hover:text-light-green font-normal;
+}
+
+html .navbar__brand {
+	color: #e1e187;
+}
+
+html .navbar__link--active,
+html .navbar__brand:active > .navbar__title {
+	@apply text-light-green;
+}
+
+html.plugin-blog article {
+	@apply pb-8;
+	border-bottom: 4px solid var(--ifm-text-color);
+}
+
+html.plugin-blog article a,
+html.plugin-blog article h2 {
+	@apply text-pretty text-green;
+	:hover {
+		@apply text-light-green;
+	}
+}
+
+html
+	.buttonGroup_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module
+	button {
+	@apply hidden;
+}
+
+html.plugin-blog.blog-post-page code {
+	@apply bg-light-green text-xs font-mono;
+}
+
+html.plugin-blog.blog-post-page article .markdown .abstract {
+	@apply flex flex-col md:flex-row mt-12 gap-4 items-start;
+}
+
+html.plugin-blog.blog-post-page article .markdown .abstract p {
+	@apply text-sm leading-6;
+}
+
+html.plugin-blog.blog-post-page article .markdown p {
+	@apply mb-4 leading-6;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text {
+	@apply pl-4 md:pl-24 relative;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text p {
+	@apply text-lg leading-8;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .figureBox figure {
+	@apply max-w-screen-sm mx-auto m-0;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .figureBox {
+	@apply grid grid-cols-1 my-12 mx-auto;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .figureBox.cols2 {
+	@apply grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .figureBox.cols3 {
+	@apply grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2;
+}
+
+html.plugin-blog.blog-post-page
+	article
+	.markdown
+	.text
+	.figureBox.cols3
+	figure:last-of-type {
+	@apply sm:col-span-2 lg:col-auto;
+}
+
+html.plugin-blog.blog-post-page
+	article
+	.markdown
+	.text
+	.figureBox
+	figure
+	figcaption
+	p {
+	@apply text-xs;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .references {
+	@apply text-sm max-w-screen-sm;
+}
+
+html.plugin-blog.blog-post-page article .markdown .up {
+	@apply text-xs sticky text-right bottom-0 right-0;
+	img {
+		@apply max-w-10;
+	}
+}
+
+html.plugin-blog.blog-post-page article header {
+	@apply text-center flex flex-col justify-center items-center gap-4 px-4 sm:px-8;
+}
+
+html.plugin-blog.blog-list-page article header {
+	@apply flex flex-row items-center;
+}
+
+html.plugin-blog article header h1 {
+	@apply text-pretty text-xl sm:text-3xl;
+}
+
+html.plugin-blog.blog-list-page article h2 {
+	@apply text-xl sm:text-3xl;
+}
+
+html.plugin-blog.blog-post-page article h2 {
+	@apply text-pretty text-xl sm:text-3xl;
+}
+
+html.plugin-blog.blog-post-page.plugin-id-default article h3 {
+	@apply capitalize text-sm sm:text-lg mb-3 bg-light-green px-2 py-6;
+}
+
+html.plugin-blog.blog-post-page article header {
+	@apply hidden;
+}
+
+html.plugin-blog.blog-post-page.plugin-id-default article header {
+	@apply block;
+}
+
+html.plugin-blog.blog-post-page article h2,
+html.plugin-blog.blog-post-page article h3,
+html.plugin-blog.blog-post-page article h4 {
+	@apply max-w-screen-md font-montserrat;
+}
+
+html.plugin-blog.blog-post-page article h4 {
+	@apply text-xs sm:text-sm mb-2;
+}
+
+html.plugin-blog.blog-post-page article p {
+	@apply text-xs sm:text-sm mb-2;
+}
+
+html.plugin-blog.blog-post-page article .markdown {
+	@apply px-2 sm:px-8 lg:px-2;
+}
+
+html.plugin-blog.blog-post-page article img {
+	width: 100%;
+	/* max-width: 115px; */
+}
+
+@layer base {
+	body {
+		@apply font-sans bg-neutral dark:bg-dark text-dark dark:text-neutral;
+	}
+
+	h1 {
+		@apply font-serif font-bold tracking-wide italic text-center text-pretty text-2xl sm:text-3xl md:text-4xl;
+	}
+
+	h2 {
+		@apply font-serif font-normal text-4xl tracking-wide text-left;
+	}
+
+	h3 {
+		@apply font-serif font-light text-2xl pt-4;
+	}
+
+	h4 {
+		@apply uppercase tracking-wide pt-2;
+	}
+
+	h1,
+	h2 {
+		@apply mb-4 pt-8;
+	}
+
+	h1,
+	h2,
+	h3 {
+		@apply capitalize;
+	}
+
+	p {
+		@apply font-sans text-pretty mb-6 leading-6 lg:text-lg max-w-prose;
+	}
+
+	header {
+		@apply text-center flex flex-col md:flex-row justify-center items-center gap-4 px-4 sm:px-8;
+	}
+
+	button {
+		@apply bg-none border-none cursor-pointer px-4 py-2 rounded dark:bg-none transition duration-500 ease-in-out hover:bg-none;
+	}
+
+	blockquote {
+		@apply mt-4 mb-8 max-w-prose ml-2 md:ml-6;
+	}
+
+	blockquote p {
+		@apply text-pretty font-montserrat italic leading-6 lg:leading-8;
+	}
+
+	h2 + blockquote {
+		@apply mt-8;
+	}
+
+	h3 + blockquote {
+		@apply mt-6;
+	}
+
+	img {
+		@apply w-full;
+	}
+
+	figure {
+		@apply shadow-xl shadow-dark my-16 grid grid-rows-[max-content];
+	}
+
+	figcaption {
+		@apply text-center italic bg-light-green/30 text-dark dark:bg-green/15 dark:text-neutral py-4 px-4 text-xs md:text-sm flex flex-col justify-center items-center;
+	}
+
+	figcaption p {
+		@apply max-w-prose text-pretty text-center;
+	}
+
+	footer {
+		@apply text-center flex flex-col justify-center items-center gap-4 px-4 sm:px-8;
+	}
+
+	footer .container .footer__copyright {
+		@apply text-sm text-center max-w-prose text-pretty mx-auto;
+	}
+
+	footer .container img {
+		@apply max-w-32;
+	}
+}
+
+@layer components {
+	.header-lg {
+		@apply min-h-[80vh];
+	}
+	.header {
+		@apply min-h-[40vh];
+	}
+	.title-wrapper {
+		@apply max-w-screen-md mx-auto px-12 sm:px-10;
+	}
+	.title-wrapper h1 {
+		@apply text-left md:text-center dark:text-dark;
+	}
+	.content-wrapper {
+		@apply max-w-screen-md mx-auto px-8 sm:pl-8 sm:pr-20 md:pl-16 md:pr-24 py-12;
+	}
+
+	.btn-primary {
+		@apply bg-red text-white hover:brightness-125;
+	}
+
+	.btn-secondary {
+		@apply border border-solid border-green text-green bg-transparent hover:bg-slate-100 dark:hover:bg-transparent dark:hover:border-turquoise dark:hover:text-turquoise hover:text-turquoise hover:border-turquoise;
+	}
+}

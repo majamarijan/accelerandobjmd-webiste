@@ -1,0 +1,10 @@
+.quote {
+  @apply flex flex-col;
+}
+.quote p {
+  @apply mb-1;
+}
+
+.quote cite {
+  @apply place-self-end;
+}

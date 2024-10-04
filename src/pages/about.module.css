@@ -1,0 +1,10 @@
+.about {
+  max-width: 69ch;
+}
+
+.aboutContainer {
+  display: flex;
+  flex-direction: row wrap;
+  align-items: center;
+  justify-content: center;
+}
