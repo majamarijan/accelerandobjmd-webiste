@@ -84,6 +84,15 @@ html.blog-list-page.plugin-blog[class*='plugin-id-articles'] header h2 {
 	@apply text-3xl text-center;
 }
 
+
+html.plugin-blog.blog-post-page article .markdown {
+	@apply px-2 md:px-4 lg:px-2;
+}
+
+html.plugin-blog.blog-post-page article .markdown .authors {
+	@apply mt-12 flex flex-col items-center max-w-prose mx-auto;
+}
+
 html.plugin-blog.blog-post-page article .markdown .abstract {
 	@apply grid grid-cols-1 md:grid-cols-[300px_1fr] gap-4 items-start my-12;
 }
@@ -102,7 +111,7 @@ html.plugin-blog.blog-post-page article .markdown p {
 }
 
 html.plugin-blog.blog-post-page article .markdown .text {
-	@apply pl-4 md:pl-24 relative;
+	@apply pl-0 sm:pl-4 relative max-w-prose mx-auto;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text p {
@@ -149,7 +158,7 @@ html.plugin-blog.blog-post-page
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .references {
-	@apply text-sm max-w-screen-sm pb-12;
+	@apply text-xs text-pretty md:text-sm max-w-screen-sm pb-12;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .references ol {
@@ -160,11 +169,15 @@ html.plugin-blog.blog-post-page article .markdown .text .additional_resources p 
 	@apply flex flex-col text-xs md:text-sm;
 }
 
-html.plugin-blog.blog-post-page article .markdown .text  .poetry {
-	@apply max-w-screen-sm;
+html.plugin-blog.blog-post-page article .markdown .text iframe {
+	@apply w-full max-w-[560px];
 }
 
-html.plugin-blog.blog-post-page article .markdown .text  .poetry code {
+html.plugin-blog.blog-post-page article .markdown .text .poetry {
+	@apply max-w-screen-md my-12;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .poetry code {
 	@apply bg-slate-100 text-xs italic;
 }
 
