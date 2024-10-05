@@ -28,6 +28,8 @@
 	--ifm-text-color: #e9efec;
 }
 
+/* general */
+
 html {
 	scroll-behavior: smooth;
 }
@@ -46,9 +48,41 @@ html .navbar__brand:active > .navbar__title {
 	@apply text-light-green;
 }
 
+html {
+	@apply bg-neutral;
+}
+
+html[data-theme='dark'] {
+	@apply bg-dark;
+}
+
+/* /////////////////////// */
+/* pre > code */
+
+html
+	.buttonGroup_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module
+	button {
+	@apply hidden;
+}
+
+html.plugin-blog.blog-post-page code {
+	@apply bg-vanilla text-xs font-mono;
+}
+
+html.plugin-blog.blog-post-page[data-theme='dark'] code {
+	@apply bg-dark-green text-xs font-mono;
+}
+
+/* /////////////////////// */
+/* plugin-blog */
+
 html.plugin-blog article {
 	@apply pb-8;
 	border-bottom: 4px solid var(--ifm-text-color);
+}
+
+html.plugin-blog article header h1 {
+	@apply text-pretty text-xl sm:text-3xl;
 }
 
 html.plugin-blog article a,
@@ -59,19 +93,19 @@ html.plugin-blog article h2 {
 	}
 }
 
-html
-	.buttonGroup_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module
-	button {
-	@apply hidden;
-}
-
-html.plugin-blog.blog-post-page code {
-	@apply bg-light-green text-xs font-mono;
-}
-
+/* /////////////////////// */
+/* plugin-blog tags-page blog-list-page */
 html.blog-tags-post-list-page.plugin-blog header,
 html.blog-list-page.plugin-blog[class*='plugin-id-articles'] header {
 	@apply flex flex-col text-sm place-items-end;
+}
+
+html.blog-list-page.plugin-blog[class*='plugin-id-default'] header {
+	@apply grid;
+}
+
+html.blog-list-page.plugin-blog[class*='plugin-id-default'] header h2 {
+	@apply text-xl md:text-3xl font-montserrat;
 }
 
 html.blog-tags-post-list-page.plugin-blog header div:last-of-type,
@@ -83,7 +117,64 @@ html.blog-list-page.plugin-blog[class*='plugin-id-articles']
 
 html.blog-tags-post-list-page.plugin-blog header h2 a,
 html.blog-list-page.plugin-blog[class*='plugin-id-articles'] header h2 {
-	@apply text-3xl text-center;
+	@apply text-3xl text-center font-montserrat;
+}
+
+/* /////////////////////// */
+/* plugin-blog post-page */
+
+html.plugin-blog.blog-post-page[data-theme='dark'] {
+	@apply bg-dark;
+}
+
+html.blog-post-page.plugin-blog.plugin-id-default aside {
+	@apply pt-6 font-sans;
+}
+
+html .main-wrapper + footer.footer,
+html[class*='plugin'] .main-wrapper + footer.footer {
+	@apply bg-night;
+}
+
+html.plugin-blog.blog-post-page article h2,
+html.plugin-blog.blog-post-page article h3,
+html.plugin-blog.blog-post-page article h4 {
+	@apply max-w-screen-md font-montserrat text-pretty;
+}
+
+html.plugin-blog.blog-post-page[class*='plugin-id-articles'] article header {
+	@apply hidden;
+}
+
+html.plugin-blog.blog-post-page.plugin-id-default article header {
+	@apply block;
+}
+
+html.plugin-blog.blog-post-page.plugin-id-default article header h1 {
+	@apply text-pretty text-2xl md:text-3xl lg:text-4xl font-montserrat not-italic;
+}
+
+html.plugin-blog.blog-post-page.plugin-id-default article h3 {
+	@apply capitalize text-sm sm:text-lg mb-3 bg-light-green px-2 py-6 dark:bg-dark-green;
+}
+
+/* /////////////////////// */
+/* article markdown */
+
+html.plugin-blog.blog-post-page.plugin-id-default .markdown p:has(a) {
+	@apply flex flex-row gap-4 pb-4;
+}
+
+html.plugin-blog.blog-post-page.plugin-id-default .markdown h3 {
+	@apply mb-0;
+}
+
+html.plugin-blog.blog-post-page.plugin-id-default .markdown h4 {
+	@apply text-pretty mt-4;
+}
+
+html.plugin-blog.blog-post-page.plugin-id-default .markdown p > a {
+	@apply px-4 py-2 border border-solid border-green rounded text-green bg-transparent dark:hover:bg-transparent dark:hover:border-turquoise dark:hover:text-turquoise hover:text-turquoise hover:border-turquoise no-underline;
 }
 
 html.plugin-blog.blog-post-page article .markdown {
@@ -95,7 +186,7 @@ html.plugin-blog.blog-post-page article .markdown .authors {
 }
 
 html.plugin-blog.blog-post-page article .markdown .abstract {
-	@apply grid grid-cols-1 md:grid-cols-[300px_1fr] gap-4 items-start my-12;
+	@apply grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 items-start my-12;
 }
 
 html.plugin-blog.blog-post-page article .markdown .abstract p {
@@ -103,19 +194,15 @@ html.plugin-blog.blog-post-page article .markdown .abstract p {
 }
 
 html.plugin-blog.blog-post-page article .markdown .abstract .citation p {
-	@apply text-xs;
-}
-
-html.plugin-blog.blog-post-page article .markdown p {
-	@apply mb-4 leading-6;
+	@apply text-xs mb-4;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text {
-	@apply pl-0 sm:pl-4 relative max-w-prose mx-auto;
+	@apply pl-0 pr-0 md:pl-2 lg:pl-12 relative;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text p {
-	@apply text-lg leading-8;
+	@apply text-lg leading-6 max-w-prose md:pr-10 mb-6 text-pretty;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .figureBox figure {
@@ -194,6 +281,10 @@ html.plugin-blog.blog-post-page article .markdown .text blockquote {
 	@apply my-12;
 }
 
+html.plugin-blog.blog-post-page main {
+	@apply relative;
+}
+
 html.plugin-blog.blog-post-page article .markdown .up {
 	@apply text-xs sticky text-right bottom-0 right-0;
 	img {
@@ -205,38 +296,8 @@ html.plugin-blog.blog-post-page article header {
 	@apply text-center flex flex-col justify-center items-center gap-4 px-4 sm:px-8;
 }
 
-html.plugin-blog.blog-list-page article header {
-	@apply flex flex-row items-center;
-}
-
-html.plugin-blog article header h1 {
-	@apply text-pretty text-xl sm:text-3xl;
-}
-
-html.plugin-blog.blog-list-page article h2 {
-	@apply text-xl sm:text-3xl;
-}
-
 html.plugin-blog.blog-post-page article h2 {
 	@apply text-pretty text-xl sm:text-3xl;
-}
-
-html.plugin-blog.blog-post-page.plugin-id-default article h3 {
-	@apply capitalize text-sm sm:text-lg mb-3 bg-light-green px-2 py-6;
-}
-
-html.plugin-blog.blog-post-page article header {
-	@apply hidden;
-}
-
-html.plugin-blog.blog-post-page.plugin-id-default article header {
-	@apply block;
-}
-
-html.plugin-blog.blog-post-page article h2,
-html.plugin-blog.blog-post-page article h3,
-html.plugin-blog.blog-post-page article h4 {
-	@apply max-w-screen-md font-montserrat;
 }
 
 html.plugin-blog.blog-post-page article h4 {
@@ -247,8 +308,13 @@ html.plugin-blog.blog-post-page article p {
 	@apply text-xs sm:text-sm mb-2;
 }
 
-html.plugin-blog.blog-post-page article .markdown {
-	@apply px-2 sm:px-8 lg:px-2;
+html.plugin-blog.blog-post-page article table {
+	@apply w-full text-xs sm:text-sm border-separate border-spacing-1;
+}
+
+
+html.plugin-blog.blog-post-page article table th {
+	@apply text-pretty bg-azure;
 }
 
 html.plugin-blog.blog-post-page.plugin-id-default article img {
@@ -256,13 +322,16 @@ html.plugin-blog.blog-post-page.plugin-id-default article img {
 	max-width: 115px;
 }
 
+/* /////////////////////// */
+/* base */
+
 @layer base {
 	body {
 		@apply font-sans bg-neutral dark:bg-dark text-dark dark:text-neutral;
 	}
 
 	h1 {
-		@apply font-serif font-bold tracking-wide italic text-center text-pretty text-2xl sm:text-3xl md:text-4xl;
+		@apply font-serif font-bold capitalize tracking-wide italic text-center text-pretty text-2xl sm:text-3xl md:text-4xl;
 	}
 
 	h2 {
@@ -360,13 +429,5 @@ html.plugin-blog.blog-post-page.plugin-id-default article img {
 	}
 	.content-wrapper {
 		@apply max-w-screen-md mx-auto px-8 sm:pl-8 sm:pr-20 md:pl-16 md:pr-24 py-12;
-	}
-
-	.btn-primary {
-		@apply bg-red text-white hover:brightness-125;
-	}
-
-	.btn-secondary {
-		@apply border border-solid border-green text-green bg-transparent hover:bg-slate-100 dark:hover:bg-transparent dark:hover:border-turquoise dark:hover:text-turquoise hover:text-turquoise hover:border-turquoise;
 	}
 }
