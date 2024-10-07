@@ -198,11 +198,11 @@ html.plugin-blog.blog-post-page article .markdown .abstract .citation p {
 }
 
 html.plugin-blog.blog-post-page article .markdown .text {
-	@apply pl-0 pr-0 md:pl-2 lg:pl-12 relative;
+	@apply pl-0 pr-0 md:pl-10 lg:pl-12 relative;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text p {
-	@apply text-lg leading-6 max-w-prose md:pr-10 mb-6 text-pretty;
+	@apply text-[1rem] md:text-lg leading-6 md:leading-8 max-w-prose md:pr-10 mb-6 text-pretty;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .figureBox figure {
@@ -213,7 +213,7 @@ html.plugin-blog.blog-post-page article .markdown .text .figureBox figure {
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .figureBox {
-	@apply grid grid-cols-1 my-12 mx-auto;
+	@apply grid grid-cols-1 my-12 max-w-prose;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .figureBox.cols2 {
@@ -256,17 +256,22 @@ html.plugin-blog.blog-post-page article .markdown .text .references ol {
 	@apply flex flex-col gap-3;
 }
 
+html.plugin-blog.blog-post-page article .markdown .text .additional_resources p,
 html.plugin-blog.blog-post-page
 	article
 	.markdown
 	.text
 	.additional_resources
-	p {
-	@apply flex flex-col text-xs md:text-sm;
+	li {
+	@apply text-xs md:text-sm max-w-prose text-pretty;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text iframe {
 	@apply w-full max-w-[560px];
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .audio {
+	@apply flex flex-col items-center mb-10;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .poetry {
@@ -274,7 +279,11 @@ html.plugin-blog.blog-post-page article .markdown .text .poetry {
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .poetry code {
-	@apply bg-slate-100 text-xs italic;
+	@apply bg-beige text-xs italic dark:bg-smoky;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .poetry code span {
+	@apply dark:text-vanilla;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text blockquote {
@@ -296,25 +305,57 @@ html.plugin-blog.blog-post-page article header {
 	@apply text-center flex flex-col justify-center items-center gap-4 px-4 sm:px-8;
 }
 
-html.plugin-blog.blog-post-page article h2 {
-	@apply text-pretty text-xl sm:text-3xl;
+html.plugin-blog.blog-post-page article .markdown h2 {
+	@apply text-pretty text-xl sm:text-3xl dark:text-emerald;
 }
 
-html.plugin-blog.blog-post-page article h4 {
-	@apply text-xs sm:text-sm mb-2;
+html.plugin-blog.blog-post-page article .markdown h3 {
+	@apply dark:text-light-green;
+}
+
+html.plugin-blog.blog-post-page article .markdown h4 {
+	@apply text-xs sm:text-sm mb-2 dark:text-turquoise;
 }
 
 html.plugin-blog.blog-post-page article p {
 	@apply text-xs sm:text-sm mb-2;
 }
 
-html.plugin-blog.blog-post-page article table {
-	@apply w-full text-xs sm:text-sm border-separate border-spacing-1;
+html.plugin-blog.blog-post-page article .markdown .figureBox:has(table) {
+	@apply w-fit mx-auto;
 }
 
+html.plugin-blog.blog-post-page article .markdown .figureBox table {
+	@apply w-full text-xs md:text-sm border-separate bg-beige dark:text-dark rounded;
+}
+
+html.plugin-blog.blog-post-page article .markdown .figureBox table td p,
+html.plugin-blog.blog-post-page article .markdown .figureBox table th p,
+html.plugin-blog.blog-post-page article .markdown .figureBox table caption p {
+	@apply text-xs md:text-sm mb-0;
+}
+
+html.plugin-blog.blog-post-page article .markdown .figureBox table th,
+html.plugin-blog.blog-post-page article .markdown .figureBox table td {
+	@apply border-none;
+}
+
+html.plugin-blog.blog-post-page
+	article
+	.markdown
+	.figureBox
+	table
+	tr:nth-child(odd),
+html.plugin-blog.blog-post-page article .markdown .figureBox table .span {
+	@apply bg-platinum;
+}
+
+html.plugin-blog.blog-post-page article .markdown .figureBox table caption {
+	@apply text-center italic bg-light-blue text-dark dark:bg-green dark:text-neutral py-4 px-4 text-xs md:text-sm flex flex-col justify-center items-center;
+}
 
 html.plugin-blog.blog-post-page article table th {
-	@apply text-pretty bg-azure;
+	@apply text-pretty bg-azure text-dark;
 }
 
 html.plugin-blog.blog-post-page.plugin-id-default article img {
@@ -394,7 +435,7 @@ html.plugin-blog.blog-post-page.plugin-id-default article img {
 	}
 
 	figcaption {
-		@apply text-center italic bg-light-green/30 text-dark dark:bg-green/15 dark:text-neutral py-4 px-4 text-xs md:text-sm flex flex-col justify-center items-center;
+		@apply text-center italic bg-light-green/30 text-dark dark:bg-green/35 dark:text-neutral py-4 px-4 text-xs md:text-sm flex flex-col justify-center items-center;
 	}
 
 	figcaption p {
