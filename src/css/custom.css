@@ -270,17 +270,20 @@ html.plugin-blog.blog-post-page
 	article
 	.markdown
 	.text
-	.figureBox:has(span) figcaption {
-		@apply flex flex-row flex-wrap gap-1;
-	}
+	.figureBox:has(span)
+	figcaption {
+	@apply flex flex-row flex-wrap gap-1;
+}
 
 html.plugin-blog.blog-post-page
 	article
 	.markdown
 	.text
-	.figureBox:has(span) figcaption p {
-		@apply text-center m-0 p-0;
-	}
+	.figureBox:has(span)
+	figcaption
+	p {
+	@apply text-center m-0 p-0;
+}
 
 html.plugin-blog.blog-post-page article .markdown .text .ol_list {
 	@apply flex flex-col my-8;
@@ -330,6 +333,45 @@ html.plugin-blog.blog-post-page article .markdown .text .poetry code span {
 
 html.plugin-blog.blog-post-page article .markdown .text blockquote {
 	@apply my-12;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .floatBox {
+	@apply clear-both;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .floatBox .figureBox {
+	@apply mb-4;
+}
+
+html.plugin-blog.blog-post-page
+	article
+	.markdown
+	.text
+	.floatBox
+	.figureBox.left {
+	@apply md:float-left md:mr-6 md:mt-0 md:w-1/4 mb-8 md:mb-4;
+}
+
+html.plugin-blog.blog-post-page
+	article
+	.markdown
+	.text
+	.floatBox
+	.figureBox.right {
+	@apply md:float-right md:ml-6 md:mt-0 md:w-1/4 mb-8 md:mb-4;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .figureGrid {
+	@apply grid grid-rows-[auto] grid-cols-1 md:grid-cols-2 md:grid-rows-[auto] gap-6 justify-center justify-items-center;
+}
+
+html.plugin-blog.blog-post-page
+	article
+	.markdown
+	.text
+	.figureGrid
+	.last {
+	@apply md:col-span-2 md:row-start-2 md:row-end-2;
 }
 
 html.plugin-blog.blog-post-page main {
