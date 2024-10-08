@@ -216,6 +216,10 @@ html.plugin-blog.blog-post-page article .markdown .text .figureBox {
 	@apply grid grid-cols-1 my-12 max-w-prose;
 }
 
+html.plugin-blog.blog-post-page article .markdown .text .figureBox span {
+	@apply text-xs;
+}
+
 html.plugin-blog.blog-post-page article .markdown .text .figureBox.cols2 {
 	@apply grid-cols-1 md:grid-cols-2 gap-4;
 }
@@ -244,8 +248,46 @@ html.plugin-blog.blog-post-page
 	@apply text-xs italic;
 }
 
+html.plugin-blog.blog-post-page
+	article
+	.markdown
+	.text
+	.figureBox:has(span)
+	figure {
+	@apply shadow-none w-full max-w-full grid-rows-[auto_auto];
+}
+
+html.plugin-blog.blog-post-page
+	article
+	.markdown
+	.text
+	.figureBox:has(span)
+	img {
+	@apply object-contain h-min;
+}
+
+html.plugin-blog.blog-post-page
+	article
+	.markdown
+	.text
+	.figureBox:has(span) figcaption {
+		@apply flex flex-row flex-wrap gap-1;
+	}
+
+html.plugin-blog.blog-post-page
+	article
+	.markdown
+	.text
+	.figureBox:has(span) figcaption p {
+		@apply text-center m-0 p-0;
+	}
+
 html.plugin-blog.blog-post-page article .markdown .text .ol_list {
 	@apply flex flex-col my-8;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text ul {
+	@apply max-w-prose;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .references {
@@ -306,7 +348,7 @@ html.plugin-blog.blog-post-page article header {
 }
 
 html.plugin-blog.blog-post-page article .markdown h2 {
-	@apply text-pretty text-xl sm:text-3xl dark:text-emerald;
+	@apply text-pretty text-xl sm:text-3xl dark:text-emerald max-w-lg;
 }
 
 html.plugin-blog.blog-post-page article .markdown h3 {
@@ -314,7 +356,7 @@ html.plugin-blog.blog-post-page article .markdown h3 {
 }
 
 html.plugin-blog.blog-post-page article .markdown h4 {
-	@apply text-xs sm:text-sm mb-2 dark:text-turquoise;
+	@apply text-xs sm:text-sm mb-2 dark:text-turquoise max-w-lg;
 }
 
 html.plugin-blog.blog-post-page article p {
