@@ -450,7 +450,11 @@ html.plugin-blog.blog-post-page article .markdown .figureBox table .span {
 }
 
 html.plugin-blog.blog-post-page article .markdown .figureBox table caption {
-	@apply text-center italic bg-light-blue text-dark dark:bg-green dark:text-neutral py-4 px-4 text-xs md:text-sm flex flex-col justify-center items-center;
+	@apply italic bg-light-blue text-dark dark:bg-green dark:text-neutral py-4 px-4 text-xs md:text-sm table-caption;
+}
+
+html.plugin-blog.blog-post-page article .markdown .figureBox table caption p {
+	@apply m-0 p-0 max-w-sm mx-auto;
 }
 
 html.plugin-blog.blog-post-page article table th {
