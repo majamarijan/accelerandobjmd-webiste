@@ -106,6 +106,7 @@ const config: Config = {
 				showReadingTime: true,
 			},
 		],
+		'image-zoom',
 	],
 	presets: [
 		[
@@ -153,6 +154,13 @@ const config: Config = {
 	themeConfig: {
 		// Replace with your project's social card
 		image: 'img/docusaurus-social-card.jpg',
+		zoom: {
+			selector: '.markdown figure img',
+			background: {
+				light: 'rgb(255, 255, 255)',
+				dark: 'rgb(50, 50, 50)'
+			},
+		},
 		navbar: {
 			title: 'Home',
 			style: 'dark',

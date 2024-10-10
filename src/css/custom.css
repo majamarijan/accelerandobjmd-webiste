@@ -420,6 +420,14 @@ html.plugin-blog.blog-post-page article p {
 	@apply text-xs sm:text-sm mb-2;
 }
 
+html.plugin-blog.blog-post-page article .markdown .imageGallery {
+	@apply grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] justify-center;
+}
+
+html.plugin-blog.blog-post-page article .markdown .imageGallery .figureBox {
+	@apply m-0 place-self-auto;
+}
+
 html.plugin-blog.blog-post-page article .markdown .figureBox:has(table) {
 	@apply w-fit mx-auto;
 }

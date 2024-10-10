@@ -20,6 +20,7 @@
 		"@heroicons/react": "^2.1.5",
 		"@mdx-js/react": "^3.0.0",
 		"clsx": "^2.0.0",
+		"docusaurus-plugin-image-zoom": "^2.0.0",
 		"dotenv": "^16.4.5",
 		"prism-react-renderer": "^2.3.0",
 		"react": "^18.0.0",
