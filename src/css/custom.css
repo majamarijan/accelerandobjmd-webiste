@@ -158,7 +158,6 @@ html.plugin-blog.blog-post-page.plugin-id-default article h3 {
 	@apply capitalize text-sm sm:text-lg mb-3 bg-light-green px-2 py-6 dark:bg-dark-green;
 }
 
-
 /* /////////////////////// */
 /* article markdown */
 
@@ -217,6 +216,16 @@ html.plugin-blog.blog-post-page article .markdown .text .figureBox {
 	@apply grid grid-cols-1 my-12 max-w-prose;
 }
 
+
+html.plugin-blog.blog-post-page
+	article
+	.markdown
+	.text
+	.figureBox
+	.figureLong {
+	@apply grid-rows-[auto_auto_100px];
+}
+
 html.plugin-blog.blog-post-page article .markdown .text .figureBox span {
 	@apply text-xs;
 }
@@ -246,8 +255,17 @@ html.plugin-blog.blog-post-page
 	figure
 	figcaption
 	p {
-	@apply text-xs italic;
+	@apply text-xs italic max-w-sm p-0 m-0 text-pretty;
 }
+
+html.plugin-blog.blog-post-page
+	article
+	.markdown
+	.text
+	.figureBox
+	figure.score img {
+		@apply object-scale-down;
+	}
 
 html.plugin-blog.blog-post-page
 	article
@@ -344,6 +362,7 @@ html.plugin-blog.blog-post-page article .markdown .text .floatBox .figureBox {
 	@apply mb-4;
 }
 
+
 html.plugin-blog.blog-post-page
 	article
 	.markdown
@@ -366,12 +385,7 @@ html.plugin-blog.blog-post-page article .markdown .text .figureGrid {
 	@apply grid grid-rows-[auto] grid-cols-1 md:grid-cols-2 md:grid-rows-[auto] gap-6 justify-center justify-items-center;
 }
 
-html.plugin-blog.blog-post-page
-	article
-	.markdown
-	.text
-	.figureGrid
-	.last {
+html.plugin-blog.blog-post-page article .markdown .text .figureGrid .last {
 	@apply md:col-span-2 md:row-start-2 md:row-end-2;
 }
 
