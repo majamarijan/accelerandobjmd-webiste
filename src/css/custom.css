@@ -382,7 +382,7 @@ html.plugin-blog.blog-post-page
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .figureGrid {
-	@apply grid grid-rows-[auto] grid-cols-1 md:grid-cols-2 md:grid-rows-[auto] gap-6 justify-center justify-items-center;
+	@apply grid grid-rows-[auto] grid-cols-1 md:grid-cols-2 md:grid-rows-[auto] gap-2 justify-center justify-items-center;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .figureGrid .last {
@@ -455,6 +455,18 @@ html.plugin-blog.blog-post-page article .markdown .figureBox table caption {
 
 html.plugin-blog.blog-post-page article table th {
 	@apply text-pretty bg-azure text-dark;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .interview ul {
+	@apply list-none mb-6;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .interview p {
+	@apply mb-2;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .interview ul li {
+	@apply italic text-sm leading-6;
 }
 
 html.plugin-blog.blog-post-page.plugin-id-default article img {
