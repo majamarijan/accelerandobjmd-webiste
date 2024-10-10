@@ -96,6 +96,16 @@ const config: Config = {
 				showReadingTime: true,
 			},
 		],
+		[
+			'@docusaurus/plugin-content-blog',
+			{
+				id: 'articles2019',
+				routeBasePath: 'articles/issue4',
+				path: './issue4',
+				blogSidebarCount: 0,
+				showReadingTime: true,
+			},
+		],
 	],
 	presets: [
 		[
