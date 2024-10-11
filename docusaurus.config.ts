@@ -106,7 +106,7 @@ const config: Config = {
 				showReadingTime: true,
 			},
 		],
-		'image-zoom',
+		require.resolve('docusaurus-plugin-image-zoom'),
 	],
 	presets: [
 		[
@@ -155,10 +155,10 @@ const config: Config = {
 		// Replace with your project's social card
 		image: 'img/docusaurus-social-card.jpg',
 		zoom: {
-			selector: '.markdown figure img',
+			selector: '.markdown .figureBox figure img',
 			background: {
+				dark: 'rgb(50, 50, 50)',
 				light: 'rgb(255, 255, 255)',
-				dark: 'rgb(50, 50, 50)'
 			},
 		},
 		navbar: {

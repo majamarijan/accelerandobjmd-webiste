@@ -216,13 +216,7 @@ html.plugin-blog.blog-post-page article .markdown .text .figureBox {
 	@apply grid grid-cols-1 my-12 max-w-prose;
 }
 
-
-html.plugin-blog.blog-post-page
-	article
-	.markdown
-	.text
-	.figureBox
-	.figureLong {
+html.plugin-blog.blog-post-page article .markdown .text .figureBox .figureLong {
 	@apply grid-rows-[auto_auto_100px];
 }
 
@@ -263,9 +257,10 @@ html.plugin-blog.blog-post-page
 	.markdown
 	.text
 	.figureBox
-	figure.score img {
-		@apply object-scale-down;
-	}
+	figure.score
+	img {
+	@apply object-scale-down;
+}
 
 html.plugin-blog.blog-post-page
 	article
@@ -361,7 +356,6 @@ html.plugin-blog.blog-post-page article .markdown .text .floatBox {
 html.plugin-blog.blog-post-page article .markdown .text .floatBox .figureBox {
 	@apply mb-4;
 }
-
 
 html.plugin-blog.blog-post-page
 	article
@@ -481,9 +475,76 @@ html.plugin-blog.blog-post-page article .markdown .text .interview ul li {
 	@apply italic text-sm leading-6;
 }
 
+html.plugin-blog.blog-post-page article .markdown .text .gallery {
+	@apply grid grid-cols-1 md:grid-cols-[80px_1fr] w-full max-w-prose h-[300px] overflow-hidden place-items-stretch bg-night border-solid border-transparent border-0 border-l-4 border-l-dark-green dark:border-l-turquoise;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .gallery figure {
+	@apply m-0 p-0 h-[inherit] flex flex-col items-center justify-center w-full relative;
+}
+
+html.plugin-blog.blog-post-page
+	article
+	.markdown
+	.text
+	.gallery
+	figure
+	figcaption {
+	@apply absolute bottom-0 left-0 p-2 bg-neutral dark:bg-smoky bg-opacity-70 text-xs text-pretty text-center w-full;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .gallery figure img {
+	@apply h-full object-scale-down w-full rounded-md max-w-[80%];
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .gallery .thumbs {
+	@apply flex flex-col items-center justify-center p-2 gap-2;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .gallery .thumbs img {
+	@apply w-12 h-8 object-cover rounded-md transition-all cursor-pointer hover:shadow-sm shadow-slate-600;
+}
+
+.fadeIn {
+	animation: 0.5s ease-in-out fadeIn forwards;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+html.plugin-blog.blog-post-page
+	article
+	.markdown
+	.text
+	.gallery
+	.thumbsWrapper {
+	@apply h-[inherit] overflow-x-hidden overflow-y-auto md:block md:col-[1] hidden;
+}
+
+html.plugin-blog.blog-post-page
+	article
+	.markdown
+	.text
+	.gallery
+	.thumbsWrapper::-webkit-scrollbar {
+	@apply hidden scroll-smooth;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
 html.plugin-blog.blog-post-page.plugin-id-default article img {
 	width: 100%;
 	max-width: 115px;
+}
+
+.medium-zoom-image--opened {
+	@apply object-contain;
 }
 
 /* /////////////////////// */
