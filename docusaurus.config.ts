@@ -106,6 +106,16 @@ const config: Config = {
 				showReadingTime: true,
 			},
 		],
+		[
+			'@docusaurus/plugin-content-blog',
+			{
+				id: 'articles2018',
+				routeBasePath: 'articles/issue3',
+				path: './issue3',
+				blogSidebarCount: 0,
+				showReadingTime: true,
+			},
+		],
 		require.resolve('docusaurus-plugin-image-zoom'),
 	],
 	presets: [

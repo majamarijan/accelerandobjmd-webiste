@@ -10,7 +10,6 @@ export default function Gallery() {
 	const [image, setImage] = useState<Image>();
 	const [animate, setAnimate] = useState(false);
 	const [inc, setInc] = useState(0);
-	const [currentImage, setCurrent] = useState(null);
 
 	useEffect(() => {
 		let timer = inc > 0 ? 2000 : 450;
@@ -37,12 +36,11 @@ export default function Gallery() {
 			}, 2500);
 		}
 		return () => clearInterval(t);
-	}, [inc, currentImage]);
+	}, [inc]);
 
 
 	function display(img: Image) {
 		setImage(img);
-		setCurrent(img);
 		setAnimate(true);
 	}
 

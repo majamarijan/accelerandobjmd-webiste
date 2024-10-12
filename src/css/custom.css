@@ -476,7 +476,7 @@ html.plugin-blog.blog-post-page article .markdown .text .interview ul li {
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .gallery {
-	@apply grid grid-cols-1 md:grid-cols-[80px_1fr] w-full max-w-prose h-[300px] overflow-hidden place-items-stretch bg-night border-solid border-transparent border-0 border-l-4 border-l-dark-green dark:border-l-turquoise;
+	@apply grid grid-cols-1 md:grid-cols-[80px_1fr] w-full max-w-prose h-[300px] overflow-hidden place-items-stretch bg-night border-solid border-transparent border-0 border-l-4 border-l-dark-green dark:border-l-turquoise my-12;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .gallery figure {
