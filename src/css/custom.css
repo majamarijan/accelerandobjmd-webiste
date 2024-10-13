@@ -399,7 +399,7 @@ html.plugin-blog.blog-post-page article header {
 }
 
 html.plugin-blog.blog-post-page article .markdown .text h2 {
-	@apply text-pretty text-xl sm:text-3xl dark:text-emerald max-w-prose;
+	@apply text-pretty text-xl sm:text-3xl dark:text-emerald max-w-xl;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text h3 {
