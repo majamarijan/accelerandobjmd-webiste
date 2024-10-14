@@ -286,18 +286,9 @@ html.plugin-blog.blog-post-page
 	.text
 	.figureBox:has(span)
 	figcaption {
-	@apply flex flex-row flex-wrap gap-1;
+	@apply flex flex-row flex-wrap gap-1 text-center m-0 p-0;
 }
 
-html.plugin-blog.blog-post-page
-	article
-	.markdown
-	.text
-	.figureBox:has(span)
-	figcaption
-	p {
-	@apply text-center m-0 p-0;
-}
 
 html.plugin-blog.blog-post-page article .markdown .text .ol_list {
 	@apply flex flex-col my-8;
@@ -330,7 +321,11 @@ html.plugin-blog.blog-post-page article .markdown .text iframe {
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .audio {
-	@apply flex flex-col items-center mb-10;
+	@apply flex flex-col items-center mb-10 max-w-prose;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .audio .audioCaption {
+	@apply text-center italic text-xs text-pretty pt-4;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .poetry {
