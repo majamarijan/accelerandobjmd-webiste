@@ -212,6 +212,23 @@ html.plugin-blog.blog-post-page article .markdown .text .figureBox figure {
 	}
 }
 
+html.plugin-blog.blog-post-page article .markdown .text figure.multiple {
+	@apply grid grid-cols-1 md:grid-cols-2 gap-2 grid-rows-[auto] place-items-center md:place-items-stretch;
+}
+
+html.plugin-blog.blog-post-page
+	article
+	.markdown
+	.text
+	figure.multiple
+	.colBox {
+	@apply grid gap-2 max-w-[240px] sm:block;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text figure.multiple img {
+	@apply max-w-[240px] md:max-w-[100%];
+}
+
 html.plugin-blog.blog-post-page article .markdown .text .figureBox {
 	@apply grid grid-cols-1 my-12 max-w-prose;
 }
@@ -288,7 +305,6 @@ html.plugin-blog.blog-post-page
 	figcaption {
 	@apply flex flex-row flex-wrap gap-1 text-center m-0 p-0;
 }
-
 
 html.plugin-blog.blog-post-page article .markdown .text .ol_list {
 	@apply flex flex-col my-8;
