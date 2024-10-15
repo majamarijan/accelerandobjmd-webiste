@@ -340,7 +340,7 @@ html.plugin-blog.blog-post-page
 }
 
 html.plugin-blog.blog-post-page article .markdown .text iframe {
-	@apply w-full max-w-[560px];
+	@apply w-full max-w-[560px] mx-auto;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .audio {
@@ -403,6 +403,9 @@ html.plugin-blog.blog-post-page article .markdown .text .figureGrid .last {
 
 html.plugin-blog.blog-post-page article .markdown .text .figureGrid .caption {
 	@apply md:col-span-2 md:row-start-[3] md:row-end-[3] text-xs italic max-w-prose text-center;
+}
+html.plugin-blog.blog-post-page article .markdown .text .figureBox .caption p {
+	@apply max-w-full p-0 m-0 text-xs md:text-sm text-center text-pretty pt-4 pb-8 italic;
 }
 
 html.plugin-blog.blog-post-page main {
