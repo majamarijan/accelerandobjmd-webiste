@@ -206,7 +206,7 @@ html.plugin-blog.blog-post-page article .markdown .text p {
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .figureBox figure {
-	@apply max-w-screen-sm mx-auto m-0 grid grid-rows-[1fr_100px] place-items-stretch;
+	@apply max-w-screen-sm mx-auto m-0 grid grid-rows-[1fr_minmax(100px_auto)] place-items-stretch;
 	img {
 		@apply object-cover;
 	}
@@ -227,6 +227,13 @@ html.plugin-blog.blog-post-page
 
 html.plugin-blog.blog-post-page article .markdown .text figure.multiple img {
 	@apply max-w-[240px] md:max-w-[100%];
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .figureBox.wide {
+	@apply max-w-full;
+}
+html.plugin-blog.blog-post-page article .markdown .text .figureBox.wide th {
+	@apply p-1;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .figureBox {
@@ -368,6 +375,7 @@ html.plugin-blog.blog-post-page article .markdown .text .floatBox .figureBox {
 	@apply mb-4;
 }
 
+
 html.plugin-blog.blog-post-page
 	article
 	.markdown
@@ -444,12 +452,12 @@ html.plugin-blog.blog-post-page article .markdown .figureBox table {
 html.plugin-blog.blog-post-page article .markdown .figureBox table td p,
 html.plugin-blog.blog-post-page article .markdown .figureBox table th p,
 html.plugin-blog.blog-post-page article .markdown .figureBox table caption p {
-	@apply text-xs md:text-sm mb-0;
+	@apply text-xs md:text-sm mb-0 p-0;
 }
 
 html.plugin-blog.blog-post-page article .markdown .figureBox table th,
 html.plugin-blog.blog-post-page article .markdown .figureBox table td {
-	@apply border-none;
+	@apply border-none py-1;
 }
 
 html.plugin-blog.blog-post-page
@@ -471,7 +479,7 @@ html.plugin-blog.blog-post-page article .markdown .figureBox table caption p {
 }
 
 html.plugin-blog.blog-post-page article table th {
-	@apply text-pretty bg-azure text-dark;
+	@apply text-pretty bg-azure text-dark text-center;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .interview ul {
