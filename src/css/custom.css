@@ -233,7 +233,7 @@ html.plugin-blog.blog-post-page article .markdown .text .figureBox.wide {
 	@apply max-w-full;
 }
 html.plugin-blog.blog-post-page article .markdown .text .figureBox.wide th {
-	@apply p-1;
+	@apply py-1 px-2;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .figureBox {
@@ -448,7 +448,7 @@ html.plugin-blog.blog-post-page article .markdown .imageGallery .figureBox {
 }
 
 html.plugin-blog.blog-post-page article .markdown .figureBox:has(table) {
-	@apply w-fit mx-auto;
+	@apply w-fit lg:mx-auto;
 }
 
 html.plugin-blog.blog-post-page article .markdown .figureBox table {
@@ -460,6 +460,7 @@ html.plugin-blog.blog-post-page article .markdown .figureBox table th p,
 html.plugin-blog.blog-post-page article .markdown .figureBox table caption p {
 	@apply text-xs md:text-sm mb-0 p-0;
 }
+
 
 html.plugin-blog.blog-post-page article .markdown .figureBox table th,
 html.plugin-blog.blog-post-page article .markdown .figureBox table td {
