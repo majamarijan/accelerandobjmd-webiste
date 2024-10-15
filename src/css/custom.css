@@ -375,7 +375,6 @@ html.plugin-blog.blog-post-page article .markdown .text .floatBox .figureBox {
 	@apply mb-4;
 }
 
-
 html.plugin-blog.blog-post-page
 	article
 	.markdown
@@ -400,6 +399,10 @@ html.plugin-blog.blog-post-page article .markdown .text .figureGrid {
 
 html.plugin-blog.blog-post-page article .markdown .text .figureGrid .last {
 	@apply md:col-span-2 md:row-start-2 md:row-end-2;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .figureGrid .caption {
+	@apply md:col-span-2 md:row-start-[3] md:row-end-[3] text-xs italic max-w-prose text-center;
 }
 
 html.plugin-blog.blog-post-page main {
