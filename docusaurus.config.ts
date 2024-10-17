@@ -62,8 +62,9 @@ const config: Config = {
 				id: 'articles2023',
 				routeBasePath: 'articles/issue8',
 				path: './issue8',
-				blogSidebarCount: 0,
+				blogSidebarCount: 'ALL',
 				showReadingTime: true,
+				blogSidebarTitle: 'Articles Issue 8'
 			},
 		],
 		[
@@ -72,8 +73,9 @@ const config: Config = {
 				id: 'articles2022',
 				routeBasePath: 'articles/issue7',
 				path: './issue7',
-				blogSidebarCount: 0,
+				blogSidebarCount: 'ALL',
 				showReadingTime: true,
+				blogSidebarTitle: "Articles Issue 7"
 			},
 		],
 		[
@@ -116,7 +118,7 @@ const config: Config = {
 				showReadingTime: true,
 			},
 		],
-			[
+		[
 			'@docusaurus/plugin-content-blog',
 			{
 				id: 'articles2017',

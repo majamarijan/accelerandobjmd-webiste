@@ -20,6 +20,7 @@
 :root {
 	--ifm-background-color: #e9efec;
 	--ifm-text-color: #181c14;
+	--ifm-color-primary: #03635d;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -62,11 +63,11 @@ html[data-theme='dark'] {
 html
 	.buttonGroup_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module
 	button {
-	@apply hidden;
+	@apply hidden pointer-events-none;
 }
 
 html.plugin-blog.blog-post-page code {
-	@apply bg-vanilla text-xs font-mono;
+	@apply text-xs font-mono;
 }
 
 html.plugin-blog.blog-post-page[data-theme='dark'] code {
@@ -178,15 +179,27 @@ html.plugin-blog.blog-post-page.plugin-id-default .markdown p > a {
 }
 
 html.plugin-blog.blog-post-page article .markdown {
-	@apply px-2 md:px-4 lg:px-2;
+	@apply border border-solid border-slate-400;
+}
+
+html.plugin-blog.blog-post-page article .markdown h1 {
+	@apply text-2xl md:text-3xl max-w-prose;
 }
 
 html.plugin-blog.blog-post-page article .markdown .authors {
-	@apply mt-12 flex flex-col items-center max-w-prose mx-auto;
+	@apply mt-12 flex flex-col items-start max-w-[250px];
+}
+
+html.plugin-blog.blog-post-page article .markdown .authors .author {
+	@apply flex flex-col text-left;
+}
+
+html.plugin-blog.blog-post-page article .markdown .authors .author > span {
+	@apply text-xs text-pretty;
 }
 
 html.plugin-blog.blog-post-page article .markdown .abstract {
-	@apply grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 items-start my-12;
+	@apply grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-6 items-start my-12;
 }
 
 html.plugin-blog.blog-post-page article .markdown .abstract p {
@@ -198,18 +211,32 @@ html.plugin-blog.blog-post-page article .markdown .abstract .citation p {
 }
 
 html.plugin-blog.blog-post-page article .markdown .text {
-	@apply pl-0 pr-0 md:pl-10 lg:pl-12 relative;
+	@apply relative;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text p {
-	@apply text-[1rem] md:text-lg leading-6 md:leading-8 max-w-prose md:pr-10 mb-6 text-pretty;
+	@apply text-[1rem] md:text-lg leading-6 md:leading-8 max-w-prose mb-6 text-pretty;
+}
+
+html.plugin-blog.blog-post-page article .markdown .text .figureBox {
+	@apply grid grid-cols-1 my-12 max-w-prose lg:max-w-full;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .figureBox figure {
-	@apply max-w-screen-sm mx-auto m-0 grid grid-rows-[1fr_minmax(100px_auto)] place-items-stretch;
+	@apply max-w-[320px] mx-auto m-0 grid grid-rows-[1fr_minmax(100px_auto)] place-items-stretch border border-solid border-slate-300 p-4;
 	img {
 		@apply object-cover;
 	}
+}
+
+html.plugin-blog.blog-post-page
+	article
+	.markdown
+	.text
+	.figureBox
+	figure
+	figcaption {
+	@apply pt-4 text-center text-xs text-pretty;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text figure.multiple {
@@ -231,13 +258,6 @@ html.plugin-blog.blog-post-page article .markdown .text figure.multiple img {
 
 html.plugin-blog.blog-post-page article .markdown .text .figureBox.wide {
 	@apply max-w-full;
-}
-html.plugin-blog.blog-post-page article .markdown .text .figureBox.wide th {
-	@apply py-1 px-2;
-}
-
-html.plugin-blog.blog-post-page article .markdown .text .figureBox {
-	@apply grid grid-cols-1 my-12 max-w-prose;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .figureBox .figureLong {
@@ -344,7 +364,7 @@ html.plugin-blog.blog-post-page article .markdown .text iframe {
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .audio {
-	@apply flex flex-col items-center mb-10 max-w-prose;
+	@apply flex flex-col items-center mb-10 max-w-prose lg:max-w-full justify-center;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .audio .audioCaption {
@@ -352,7 +372,7 @@ html.plugin-blog.blog-post-page article .markdown .text .audio .audioCaption {
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .poetry {
-	@apply max-w-screen-md my-12;
+	@apply max-w-screen-md mb-12 mt-6;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .poetry code {
@@ -394,16 +414,16 @@ html.plugin-blog.blog-post-page
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .figureGrid {
-	@apply grid grid-rows-[auto] grid-cols-1 md:grid-cols-2 md:grid-rows-[auto] gap-2 gap-y-8 justify-center justify-items-center;
+	@apply grid grid-rows-[auto] grid-cols-1 lg:grid-cols-[repeat(2,minmax(auto,_auto))] lg:grid-rows-[auto] gap-2 gap-y-8 justify-center justify-items-center my-8 max-w-prose lg:max-w-full;
 }
 
-
-html.plugin-blog.blog-post-page article .markdown .text .figureGrid figure {
+html.plugin-blog.blog-post-page article .markdown .text .figureGrid figure,
+html.plugin-blog.blog-post-page article .markdown .text .figureGrid .figureBox {
 	@apply m-0;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .figureGrid .last {
-	@apply md:col-span-2 md:row-start-2 md:row-end-2;
+	@apply md:col-span-2 lg:row-start-2 lg:row-end-2;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .figureGrid .caption {
@@ -429,11 +449,11 @@ html.plugin-blog.blog-post-page article header {
 }
 
 html.plugin-blog.blog-post-page article .markdown .text h2 {
-	@apply text-pretty text-xl sm:text-3xl dark:text-emerald max-w-xl;
+	@apply text-pretty text-xl sm:text-2xl dark:text-emerald max-w-xl;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text h3 {
-	@apply dark:text-light-green max-w-lg;
+	@apply dark:text-light-green max-w-xl;
 }
 
 html.plugin-blog.blog-post-page article .markdown h4 {
@@ -460,17 +480,24 @@ html.plugin-blog.blog-post-page article .markdown .figureBox table {
 	@apply w-full text-xs md:text-sm border-separate bg-beige dark:text-dark rounded;
 }
 
-html.plugin-blog.blog-post-page article .markdown .figureBox table td p,
-html.plugin-blog.blog-post-page article .markdown .figureBox table th p,
-html.plugin-blog.blog-post-page article .markdown .figureBox table caption p {
-	@apply text-xs md:text-sm mb-0 p-0;
+html.plugin-blog.blog-post-page article .markdown .figureBox table th {
+	@apply border-none py-1 text-xs;
 }
 
-
-html.plugin-blog.blog-post-page article .markdown .figureBox table th,
 html.plugin-blog.blog-post-page article .markdown .figureBox table td {
-	@apply border-none py-1;
+	@apply text-xs mb-0 p-1;
 }
+
+html.plugin-blog.blog-post-page article .markdown .figureBox table caption {
+	@apply italic py-2 bg-light-blue text-dark dark:bg-green dark:text-neutral text-xs md:text-sm table-caption;
+}
+
+html.plugin-blog.blog-post-page article .markdown .figureBox table caption p,
+html.plugin-blog.blog-post-page article .markdown .figureBox table th p,
+html.plugin-blog.blog-post-page article .markdown .figureBox table td p {
+	@apply m-0 p-0 text-xs;
+}
+
 
 html.plugin-blog.blog-post-page
 	article
@@ -482,16 +509,17 @@ html.plugin-blog.blog-post-page article .markdown .figureBox table .span {
 	@apply bg-platinum;
 }
 
-html.plugin-blog.blog-post-page article .markdown .figureBox table caption {
-	@apply italic bg-light-blue text-dark dark:bg-green dark:text-neutral py-4 px-4 text-xs md:text-sm table-caption;
-}
-
-html.plugin-blog.blog-post-page article .markdown .figureBox table caption p {
-	@apply m-0 p-0 max-w-sm mx-auto;
-}
 
 html.plugin-blog.blog-post-page article table th {
 	@apply text-pretty bg-azure text-dark text-center;
+}
+
+html.plugin-blog.blog-post-page article .markdown .figureBox table.centerText td {
+	@apply text-center;
+}
+
+html.plugin-blog.blog-post-page article .markdown .figureBox table.centerText tr td:nth-child(1) {
+	@apply text-left;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .interview ul {
@@ -645,18 +673,6 @@ html.plugin-blog.blog-post-page.plugin-id-default article img {
 		@apply w-full;
 	}
 
-	figure {
-		@apply shadow-xl shadow-dark my-16 grid grid-rows-[max-content];
-	}
-
-	figcaption {
-		@apply text-center italic bg-light-green/30 text-dark dark:bg-green/35 dark:text-neutral py-4 px-4 text-xs md:text-sm flex flex-col justify-center items-center;
-	}
-
-	figcaption p {
-		@apply max-w-prose text-pretty text-center;
-	}
-
 	footer {
 		@apply text-center flex flex-col justify-center items-center gap-4 px-4 sm:px-8;
 	}
@@ -667,6 +683,17 @@ html.plugin-blog.blog-post-page.plugin-id-default article img {
 
 	footer .container img {
 		@apply max-w-32;
+	}
+
+	table {
+		@apply w-full m-0 p-0;
+	}
+
+	table thead th {
+		@apply p-1;
+	}
+	table tbody th p {
+		@apply p-0;
 	}
 }
 
