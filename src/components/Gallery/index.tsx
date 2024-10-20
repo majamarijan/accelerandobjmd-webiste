@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import { images } from '../../../issue4/article05/data';
 
 type Image = {
-	src: any;
 	alt: string;
+	thumb: string;
 };
 
 export default function Gallery() {
@@ -57,7 +57,7 @@ export default function Gallery() {
 				{image ? (
 					<>
 						<img
-							src={image.src}
+							src={image.thumb}
 							alt={image.alt}
 							className={animate ? 'fadeIn' : ''}
 						/>
@@ -68,7 +68,7 @@ export default function Gallery() {
 				) : (
 					<>
 						<img
-							src={images[0].src}
+							src={images[0].thumb}
 							alt={images[0].alt}
 							className={animate ? 'fadeIn' : ''}
 						/>

@@ -25,10 +25,12 @@ module.exports = {
         xl: '1440px',
       },
       fontFamily: {
-        sans: ['Noto Sans', 'Inter', 'Open Sans', 'Roboto', 'sans-serif'],
+        sans: ['Noto Sans', 'Roboto', 'Open Sans', 'Inter', 'sans-serif'],
         serif: ['Merriweather', 'Garamond', 'serif'],
         montserrat: ['Montserrat', 'sans-serif'],
         mono: ['Courier', 'monospace'],
+        inter: ['Inter', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
       },
       colors: {
         'dark': '#181C14',
@@ -36,6 +38,7 @@ module.exports = {
         "smoky": "#0D0F05",
         'dimgray': "#616363",
         'platinum': "#DBDBDB",
+        "light": "#FCFCFC",
         'neutral': '#E9EFEC',
         'vanilla': "#D0DB97",
         "beige": "#F1F5E0",
