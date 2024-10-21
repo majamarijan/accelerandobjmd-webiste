@@ -206,24 +206,20 @@ html.plugin-blog.blog-post-page article header {
 }
 
 html.plugin-blog.blog-post-page article .markdown .text h2 {
-	@apply font-bold text-xl md:text-2xl pb-3 max-w-prose mt-0 pt-3;
+	@apply font-bold text-xl md:text-2xl max-w-prose mt-0 pt-3;
 }
 
 
 html.plugin-blog.blog-post-page article .markdown .text h3 {
 	@apply dark:text-light-green max-w-xl text-lg md:text-xl font-bold;
 }
-html.plugin-blog.blog-post-page article .markdown .text h2,
-html.plugin-blog.blog-post-page article .markdown .text h3 {
-	@apply font-serif;
-}
 
 html.plugin-blog.blog-post-page article .markdown h4 {
-	@apply text-sm sm:text-base mb-4 dark:text-turquoise font-serif;
+	@apply text-sm sm:text-base mb-4 dark:text-turquoise;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text p {
-	@apply text-sm md:text-base lg:text-lg leading-7 md:leading-8 lg:leading-9 max-w-prose mb-6 text-pretty font-montserrat;
+	@apply text-sm md:text-base lg:text-lg leading-7 md:leading-8 lg:leading-9 max-w-prose mb-6 text-pretty font-light;
 }
 
 html.plugin-blog.blog-post-page article .markdown .authors {
@@ -288,9 +284,9 @@ html.plugin-blog.blog-post-page article .markdown .text .figureBox {
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .figureBox figure {
-	@apply max-w-[320px] mx-auto m-0 grid grid-rows-[1fr_auto] place-items-stretch border border-solid border-slate-300 p-4;
+	@apply max-w-[250px] mx-auto m-0 grid grid-rows-[1fr_auto] place-items-stretch border border-solid border-slate-300 p-4;
 	img {
-		@apply object-cover;
+		@apply object-cover w-full h-full rounded;
 	}
 }
 
@@ -457,7 +453,7 @@ html.plugin-blog.blog-post-page article .markdown .text .floatBox {
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .floatBox .figureBox {
-	@apply m-0;
+	@apply m-0 md:w-[45%];
 }
 
 html.plugin-blog.blog-post-page
@@ -466,7 +462,7 @@ html.plugin-blog.blog-post-page
 	.text
 	.floatBox
 	.figureBox.left {
-	@apply md:float-left md:pr-6 md:w-1/4 py-4;
+	@apply md:float-left md:pr-6 py-4;
 }
 
 html.plugin-blog.blog-post-page
@@ -475,7 +471,7 @@ html.plugin-blog.blog-post-page
 	.text
 	.floatBox
 	.figureBox.right {
-	@apply md:float-right md:ml-6 md:mt-0 md:w-1/4 mb-8 md:mb-4;
+	@apply md:float-right md:ml-6 md:mt-0 mb-8 md:mb-4;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .floatBox.textInCol p {
@@ -495,8 +491,9 @@ html.plugin-blog.blog-post-page article .markdown .text .figureGrid .last {
 	@apply md:col-span-2 lg:row-start-2 lg:row-end-2;
 }
 
-html.plugin-blog.blog-post-page article .markdown .text .figureGrid .caption {
-	@apply md:col-span-2 md:row-start-[3] md:row-end-[3] text-xs italic max-w-prose text-center;
+html.plugin-blog.blog-post-page article .markdown .text .figureGrid .caption,
+html.plugin-blog.blog-post-page article .markdown .text .figureGrid .caption p {
+	@apply md:col-span-2 text-xs italic max-w-prose leading-4 text-center mb-0;
 }
 html.plugin-blog.blog-post-page article .markdown .text .figureBox .caption p {
 	@apply max-w-full p-0 m-0 text-xs md:text-sm text-center text-pretty pt-4 pb-8 italic;
@@ -704,7 +701,14 @@ html.plugin-blog.blog-post-page.plugin-id-default article img {
 	}
 
 	p {
-		@apply font-sans text-pretty mb-6 leading-6 lg:text-lg max-w-prose text-base;
+		@apply font-sans text-pretty mb-6 leading-6 lg:text-lg max-w-prose text-base font-light;
+	}
+
+	ol li,
+	ul li,
+	ol li p,
+	ul li p {
+		@apply font-light;
 	}
 
 	header {
@@ -756,6 +760,11 @@ html.plugin-blog.blog-post-page.plugin-id-default article img {
 	}
 	table tbody th p {
 		@apply p-0;
+	}
+
+	table td,
+	table tbody td p {
+		@apply font-normal;
 	}
 }
 
