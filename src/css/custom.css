@@ -258,6 +258,11 @@ html.plugin-blog.blog-post-page article .markdown .text .list ol {
 	@apply text-sm;
 }
 
+html.plugin-blog.blog-post-page article .markdown .text ol,
+html.plugin-blog.blog-post-page article .markdown .text ul {
+	@apply mb-8;
+}
+
 html.plugin-blog.blog-post-page
 	article
 	.markdown
@@ -526,16 +531,18 @@ html.plugin-blog.blog-post-page article .markdown .figureBox table {
 	@apply w-full text-xs md:text-sm border-separate bg-beige dark:text-dark rounded;
 }
 
-html.plugin-blog.blog-post-page article .markdown .figureBox table th {
-	@apply border-none py-1 text-xs;
+html.plugin-blog.blog-post-page article .markdown .figureBox table th,
+html.plugin-blog.blog-post-page article .markdown .figureBox table th p {
+	@apply border-none py-1 text-xs font-bold;
 }
 
-html.plugin-blog.blog-post-page article .markdown .figureBox table td {
-	@apply text-xs mb-0 p-1;
+html.plugin-blog.blog-post-page article .markdown .figureBox table td ,
+html.plugin-blog.blog-post-page article .markdown .figureBox table td p{
+	@apply text-xs mb-0 p-1 font-normal;
 }
 
 html.plugin-blog.blog-post-page article .markdown .figureBox table caption {
-	@apply italic py-2 bg-light-blue text-dark dark:bg-green dark:text-neutral text-xs md:text-sm table-caption;
+	@apply italic py-3 bg-light-blue text-dark dark:bg-green dark:text-neutral text-xs table-caption;
 }
 
 html.plugin-blog.blog-post-page article .markdown .figureBox table caption p,
@@ -543,6 +550,7 @@ html.plugin-blog.blog-post-page article .markdown .figureBox table th p,
 html.plugin-blog.blog-post-page article .markdown .figureBox table td p {
 	@apply m-0 p-0 text-xs;
 }
+
 
 html.plugin-blog.blog-post-page
 	article
@@ -756,10 +764,10 @@ html.plugin-blog.blog-post-page.plugin-id-default article img {
 	}
 
 	table thead th {
-		@apply p-1;
+		@apply p-1 font-bold;
 	}
 	table tbody th p {
-		@apply p-0;
+		@apply p-0 font-bold;
 	}
 
 	table td,
