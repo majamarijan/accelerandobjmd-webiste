@@ -15,12 +15,6 @@ const config: Config = {
 	// Set the /<baseUrl>/ pathname under which your site is served
 	// For GitHub pages deployment, it is often '/<projectName>/'
 	baseUrl: '/',
-
-	// GitHub pages deployment config.
-	// If you aren't using GitHub pages, you don't need these.
-	organizationName: 'facebook', // Usually your GitHub org/user name.
-	projectName: 'docusaurus', // Usually your repo name.
-
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
 
@@ -52,7 +46,8 @@ const config: Config = {
 				id: 'articles2024',
 				routeBasePath: 'articles/issue9',
 				path: './issue9',
-				blogSidebarCount: 0,
+				blogSidebarCount: 'ALL',
+				blogSidebarTitle: 'Articles Issue 9',
 				showReadingTime: true,
 			},
 		],
@@ -166,9 +161,6 @@ const config: Config = {
 					blogTitle: 'Archive',
 					blogDescription:
 						'Accelerando: Journal of Music and Dance, Issues Archive',
-
-					// Please change this to your repo.
-					// Remove this to remove the "edit this page" links.
 
 					editLocalizedFiles: false,
 					// Please change this to your repo.

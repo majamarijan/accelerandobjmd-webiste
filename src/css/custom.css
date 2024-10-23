@@ -105,6 +105,16 @@ html.blog-list-page.plugin-blog[class*='plugin-id-default'] header {
 	@apply grid;
 }
 
+html.blog-post-page.plugin-blog[class*='plugin-id-default'] header {
+	@apply bg-light dark:bg-smoky rounded-t-lg;
+}
+
+html.blog-post-page.plugin-blog[class*='plugin-id-default']
+	header
+	div:has(time) {
+	margin: 0 !important;
+}
+
 html.blog-list-page.plugin-blog[class*='plugin-id-default'] header h2 {
 	@apply text-xl md:text-3xl font-montserrat;
 }
@@ -113,12 +123,30 @@ html.blog-tags-post-list-page.plugin-blog header div:last-of-type,
 html.blog-list-page.plugin-blog[class*='plugin-id-articles']
 	header
 	div:last-of-type {
-	@apply place-self-start grid;
+	@apply block place-self-start;
+}
+
+html.blog-list-page.plugin-blog[class*='plugin-id-articles']
+	header
+	div:last-of-type
+	a
+	> span {
+	@apply text-sm;
+}
+
+html.blog-list-page.plugin-blog[class*='plugin-id-articles']
+	header
+	div[class*='authorSocials'] {
+	@apply hidden;
 }
 
 html.blog-tags-post-list-page.plugin-blog header h2 a,
 html.blog-list-page.plugin-blog[class*='plugin-id-articles'] header h2 {
 	@apply text-3xl text-center font-montserrat;
+}
+
+html.blog-list-page.plugin-blog[class*='plugin-id-articles'] aside ul li a {
+	@apply text-xs font-inter;
 }
 
 /* /////////////////////// */
@@ -143,8 +171,28 @@ html.plugin-blog.blog-post-page article h4 {
 	@apply max-w-screen-md font-montserrat text-pretty;
 }
 
-html.plugin-blog.blog-post-page[class*='plugin-id-articles'] article header {
+html.plugin-blog.blog-post-page[class*='plugin-id-articles'] article header h1,
+html.plugin-blog.blog-post-page[class*='plugin-id-articles']
+	article
+	header
+	div:not(
+		html.plugin-blog.blog-post-page[class*='plugin-id-articles']
+			article
+			header
+			div:has(time)
+	) {
 	@apply hidden;
+}
+
+html.plugin-blog.blog-post-page[class*='plugin-id-articles'] article header {
+	@apply bg-light dark:bg-smoky text-dark dark:text-neutral font-mono;
+}
+
+html.plugin-blog.blog-post-page[class*='plugin-id-articles']
+	article
+	header
+	div:has(time) {
+	@apply place-self-end px-3;
 }
 
 html.plugin-blog.blog-post-page.plugin-id-default article header {
@@ -206,9 +254,8 @@ html.plugin-blog.blog-post-page article header {
 }
 
 html.plugin-blog.blog-post-page article .markdown .text h2 {
-	@apply font-bold text-xl md:text-2xl max-w-prose mt-0 pt-3;
+	@apply font-bold text-xl md:text-2xl max-w-prose mt-0;
 }
-
 
 html.plugin-blog.blog-post-page article .markdown .text h3 {
 	@apply dark:text-light-green max-w-xl text-lg md:text-xl font-bold;
@@ -320,6 +367,15 @@ html.plugin-blog.blog-post-page
 
 html.plugin-blog.blog-post-page article .markdown .text figure.multiple img {
 	@apply max-w-[240px] md:max-w-[100%];
+}
+
+html.plugin-blog.blog-post-page
+	article
+	.markdown
+	.text
+	.figureBox
+	figure.large {
+	@apply max-w-xl place-items-center;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text .figureBox.wide {
@@ -515,6 +571,9 @@ html.plugin-blog.blog-post-page article .markdown .up {
 	}
 }
 
+html.plugin-blog.blog-post-page article .markdown .text .arrowUp {
+}
+
 html.plugin-blog.blog-post-page article .markdown .imageGallery {
 	@apply grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] justify-center;
 }
@@ -536,8 +595,8 @@ html.plugin-blog.blog-post-page article .markdown .figureBox table th p {
 	@apply border-none py-1 text-xs font-bold;
 }
 
-html.plugin-blog.blog-post-page article .markdown .figureBox table td ,
-html.plugin-blog.blog-post-page article .markdown .figureBox table td p{
+html.plugin-blog.blog-post-page article .markdown .figureBox table td,
+html.plugin-blog.blog-post-page article .markdown .figureBox table td p {
 	@apply text-xs mb-0 p-1 font-normal;
 }
 
@@ -550,7 +609,6 @@ html.plugin-blog.blog-post-page article .markdown .figureBox table th p,
 html.plugin-blog.blog-post-page article .markdown .figureBox table td p {
 	@apply m-0 p-0 text-xs;
 }
-
 
 html.plugin-blog.blog-post-page
 	article
@@ -699,7 +757,7 @@ html.plugin-blog.blog-post-page.plugin-id-default article img {
 
 	h1,
 	h2 {
-		@apply mb-4 pt-8;
+		@apply mb-6 pt-8;
 	}
 
 	h1,
