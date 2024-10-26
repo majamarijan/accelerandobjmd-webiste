@@ -301,8 +301,9 @@ html.plugin-blog.blog-post-page article .markdown .text .list {
 	@apply max-w-prose mx-auto text-sm;
 }
 
-html.plugin-blog.blog-post-page article .markdown .text .list ol {
-	@apply text-sm;
+html.plugin-blog.blog-post-page article .markdown .text .list ol, 
+html.plugin-blog.blog-post-page article .markdown .text .list ul {
+	@apply text-sm list-none;
 }
 
 html.plugin-blog.blog-post-page article .markdown .text ol,
