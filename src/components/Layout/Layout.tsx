@@ -13,7 +13,7 @@ export default function Wrapper({title, description,children}:Props) {
 		<Layout
 			title={title}
 			description={description}
-			wrapperClassName={clsx('bg-neutral dark:bg-dark transition transition-duration-600 ease-in-out', styles.layout)}
+			wrapperClassName={clsx('bg-neutral dark:bg-dark relative transition transition-duration-600 ease-in-out', styles.layout)}
       >
 			{children}
 		</Layout>

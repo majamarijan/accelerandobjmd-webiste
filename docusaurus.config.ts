@@ -183,7 +183,7 @@ const config: Config = {
 
 	themeConfig: {
 		// Replace with your project's social card
-		image: 'img/docusaurus-social-card.jpg',
+		image: 'img/LOGO_320.png',
 		zoom: {
 			selector: '.markdown .figureBox figure img',
 			background: {

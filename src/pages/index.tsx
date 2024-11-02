@@ -1,10 +1,8 @@
-import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
-import HomepageCards from '../components/HomepageCards';
-import styles from './index.module.css';
 import Wrapper from '../components/Layout/Layout';
+import Link from '@docusaurus/Link';
 
 function HomepageHeader() {
 	const { siteConfig } = useDocusaurusContext();
@@ -12,9 +10,7 @@ function HomepageHeader() {
 		<header className='header-lg'>
 			<picture>
 				<source
-					srcSet={`${
-						require('@site/static/img/LOGO_120-comp.png')
-					}, ${require('@site/static/img/LOGO_240-comp.png')} 320w`}
+					srcSet={`${require('@site/static/img/LOGO_120-comp.png')}, ${require('@site/static/img/LOGO_240-comp.png')} 320w`}
 				/>
 				<img
 					src={require('@site/static/img/LOGO_240-comp.png').default}
@@ -23,7 +19,6 @@ function HomepageHeader() {
 					width='auto'
 				/>
 			</picture>
-		
 
 			<div className='flex flex-col text-2xl justify-center'>
 				<Heading
@@ -36,22 +31,12 @@ function HomepageHeader() {
 					{siteConfig.tagline}
 				</p>
 				<div className='flex gap-2 justify-center items-center md:justify-start'>
-					<button
-						className={clsx(
-							'bg-orange-800 text-white hover:bg-orange-700',
-							styles.btn
-						)}
-					>
+					<Link to='/about' className='btn btn-primary'>
 						Read more
-					</button>
-					<button
-						className={clsx(
-							'bg-teal-800 text-white hover:bg-teal-600 transition transition-duration-600 ease-in-out',
-							styles.btn
-						)}
-					>
+					</Link>
+					<Link to='/archive' className='btn btn-secondary'>
 						Last Issue
-					</button>
+					</Link>
 				</div>
 			</div>
 		</header>
@@ -64,9 +49,8 @@ export default function Home(): JSX.Element {
 	return (
 		<Wrapper title={siteConfig.title} description='This is the homepage'>
 			<HomepageHeader />
-			<main>
+			<main className='pb-12'>
 				<HomepageFeatures />
-				<HomepageCards />
 			</main>
 		</Wrapper>
 	);

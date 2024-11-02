@@ -88,7 +88,7 @@ html.plugin-blog article header h1 {
 
 html.plugin-blog article a,
 html.plugin-blog article h2 {
-	@apply text-pretty text-green;
+	@apply text-pretty text-green dark:text-light-green;
 	:hover {
 		@apply text-light-green;
 	}
@@ -301,7 +301,7 @@ html.plugin-blog.blog-post-page article .markdown .text .list {
 	@apply max-w-prose mx-auto text-sm;
 }
 
-html.plugin-blog.blog-post-page article .markdown .text .list ol, 
+html.plugin-blog.blog-post-page article .markdown .text .list ol,
 html.plugin-blog.blog-post-page article .markdown .text .list ul {
 	@apply text-sm list-none;
 }
@@ -778,6 +778,10 @@ html.plugin-blog.blog-post-page.plugin-id-default article img {
 		@apply font-light;
 	}
 
+	a {
+		@apply hover:no-underline;
+	}
+
 	header {
 		@apply text-center flex flex-col md:flex-row justify-center items-center gap-4 px-4 sm:px-8;
 	}
@@ -837,7 +841,7 @@ html.plugin-blog.blog-post-page.plugin-id-default article img {
 
 @layer components {
 	.header-lg {
-		@apply min-h-[80vh];
+		@apply min-h-[65vh];
 	}
 	.header {
 		@apply min-h-[40vh];
@@ -850,5 +854,17 @@ html.plugin-blog.blog-post-page.plugin-id-default article img {
 	}
 	.content-wrapper {
 		@apply max-w-screen-md mx-auto px-8 sm:pl-8 sm:pr-20 md:pl-16 md:pr-24 py-12;
+	}
+
+	.btn {
+		@apply text-dark py-2 px-4 rounded text-sm dark:text-neutral transition duration-200 ease-in-out hover:outline hover:outline-2 hover:outline-offset-1 hover:outline-light-green;
+	}
+
+	.btn-primary {
+		@apply bg-green text-neutral hover:text-neutral;
+	}
+
+	.btn-secondary {
+		@apply bg-azure dark:bg-azure/20;
 	}
 }
