@@ -1,11 +1,10 @@
 import Wrapper from '../components/Layout/Layout';
-import styles from './about.module.css';
 import Link from '@docusaurus/Link';
 
 export default function About(): JSX.Element {
 	return (
 		<Wrapper title='About' description='About Page'>
-			<div className={`navigation ${styles.navigation}`}>
+			<div className='about_navigation'>
 				<nav>
 					<ul>
 						<li>
@@ -30,9 +29,9 @@ export default function About(): JSX.Element {
 				</nav>
 			</div>
 			<AboutHeader />
-			<main className={styles.main}>
+			<div className='about_main'>
 				<div id='1'></div>
-				<Section bgColor='neutral'>
+				<Section >
 					<img
 						src={require('@site/static/img/LOGO_240.png').default}
 						alt='logo'
@@ -52,7 +51,7 @@ export default function About(): JSX.Element {
 					</p>
 				</Section>
 				<div id='2'></div>
-				<Section bgColor={'beige'}>
+				<Section>
 					<h2>MAIN GOALS</h2>
 					<ul>
 						<li>
@@ -70,7 +69,7 @@ export default function About(): JSX.Element {
 					</ul>
 				</Section>
 				<div id='3'></div>
-				<Section bgColor={'beige'}>
+				<Section>
 					<h2>THEMATIC AREAS</h2>
 					<ul>
 						<li>Education in Music and Dance</li>
@@ -79,7 +78,7 @@ export default function About(): JSX.Element {
 					</ul>
 				</Section>
 				<div id='4'></div>
-				<Section bgColor={'beige'}>
+				<Section>
 					<h2>PUBLISHING</h2>
 					<ul>
 						<li>Publications are published in electronic format</li>
@@ -93,15 +92,16 @@ export default function About(): JSX.Element {
 					</ul>
 				</Section>
 				<div id='5'></div>
-				<Section bgColor={'beige'}>
+				<Section>
 					<h2>Indexing and Archiving</h2>
 					<div>
 						<p>
 							Accelerando: BJMD is indexed in: DOAJ, RILM (Core Journal),
 							WorldCat, ULRICH, National Library of Serbia, Erih PLUS, and
-							other. Also, our journal has its <Link to='/archive'>own archive</Link>.
+							other. Also, our journal has its{' '}
+							<Link to='/archive'>own archive</Link>.
 						</p>
-						<div className={styles.archive}>
+						<div className='about_imageContainer'>
 							<a href='https://doaj.org/toc/2466-3913'>
 								<img
 									src={require('@site/static/img/doaj.png').default}
@@ -130,11 +130,11 @@ export default function About(): JSX.Element {
 					</div>
 				</Section>
 				<div id='6'></div>
-				<Section bgColor={'beige'}>
+				<Section>
 					<h2>Copyright</h2>
 					<p>Authors keep the copyright of their articles.</p>
 				</Section>
-				<Section bgColor={'beige'}>
+				<Section>
 					<div></div>
 					<p className='max-w-sm text-right'>
 						{' '}
@@ -142,33 +142,19 @@ export default function About(): JSX.Element {
 						accelerandojournal@gmail.com
 					</p>
 				</Section>
-			</main>
+			</div>
 		</Wrapper>
 	);
 }
 
 function AboutHeader() {
 	return (
-		<div className='h-[100vh] bg-azure/80 dark:bg-dark text-light flex items-center px-8 sticky top-0'>
-			<h1 className='text-3xl md:text-5xl lg:text-[120px]'>About Journal</h1>
+		<div className='about_header'>
+			<h1>About Journal</h1>
 		</div>
 	);
 }
 
-function Section({
-	bgColor,
-	children,
-}: {
-	bgColor: string;
-	children: React.ReactNode;
-}) {
-	return (
-		<section
-			className={`bg-${bgColor} ${
-				bgColor === 'dark' ? 'text-neutral' : ''
-			} dark:bg-night dark:text-light grid grid-cols-1 md:grid-cols-2 grid-rows-[auto] relative z-10 gap-8 md:sticky md:top-0 px-8 min-h-[125vh] place-items-center place-content-center text-sm sm:text-md lg:text-lg`}
-		>
-			{children}
-		</section>
-	);
+function Section({ children }: { children: React.ReactNode }) {
+	return <section className='about_section'>{children}</section>;
 }

@@ -214,6 +214,7 @@ const config: Config = {
 					label: 'Guidelines',
 				},
 				{ to: '/archive', label: 'Archive', position: 'left' },
+				{ to: '/submission', label: 'Submission', position: 'left' },
 			],
 		},
 		footer: {

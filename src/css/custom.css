@@ -21,6 +21,7 @@
 	--ifm-background-color: #e9efec;
 	--ifm-text-color: #181c14;
 	--ifm-color-primary: #03635d;
+	--ifm-footer-logo-max-width: 128px;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -572,9 +573,6 @@ html.plugin-blog.blog-post-page article .markdown .up {
 	}
 }
 
-html.plugin-blog.blog-post-page article .markdown .text .arrowUp {
-}
-
 html.plugin-blog.blog-post-page article .markdown .imageGallery {
 	@apply grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] justify-center;
 }
@@ -733,6 +731,95 @@ html.plugin-blog.blog-post-page.plugin-id-default article img {
 }
 
 /* /////////////////////// */
+/* plugin-pages */
+html.plugin-pages.plugin-id-default ul {
+	@apply text-sm md:text-lg list-none;
+}
+
+html.plugin-pages.plugin-id-default ul li {
+	@apply py-4;
+}
+
+html.plugin-pages.plugin-id-default .about_navigation {
+	@apply hidden md:block md:fixed top-[60px] z-[100] right-0 left-0 dark:bg-black text-light text-right bg-neutral;
+}
+
+html.plugin-pages.plugin-id-default .about_navigation nav ul {
+	@apply list-none hidden md:flex gap-2 text-sm items-center justify-end p-4;
+}
+
+html.plugin-pages.plugin-id-default .about_header {
+	@apply h-[100vh] bg-azure dark:bg-dark text-light flex items-center px-8 sticky top-0;
+}
+
+html.plugin-pages.plugin-id-default .about_header h1 {
+	@apply text-3xl md:text-5xl lg:text-[120px];
+}
+
+html.plugin-pages.plugin-id-default .about_main h2,
+html.plugin-pages.plugin-id-default .about_main .about_main p,
+html.plugin-pages.plugin-id-default .about_main .about_main ul,
+html.plugin-pages.plugin-id-default .about_main .about_main ol {
+	@apply font-montserrat;
+}
+
+html.plugin-pages.plugin-id-default .about_main ol,
+html.plugin-pages.plugin-id-default .about_main ul {
+	@apply max-w-[60ch];
+}
+
+html.plugin-pages.plugin-id-default .about_main ul {
+	list-style: none;
+}
+
+html.plugin-pages.plugin-id-default .about_main p {
+	@apply max-w-prose;
+}
+
+html.plugin-pages.plugin-id-default .about_main ul li {
+	@apply border border-solid border-light-blue rounded p-2 mb-2;
+}
+
+html.plugin-pages.plugin-id-default .about_imageContainer {
+	@apply flex flex-wrap items-center gap-2;
+}
+
+html.plugin-pages.plugin-id-default .about_imageContainer img {
+	@apply w-full max-w-[120px] rounded-lg;
+}
+
+html.plugin-pages.plugin-id-default .about_section {
+	@apply dark:bg-night dark:text-light grid grid-cols-1 md:grid-cols-2 grid-rows-[auto] relative z-10 gap-8 md:sticky md:top-0 px-8 min-h-[125vh] place-items-center place-content-center text-sm sm:text-base lg:text-lg bg-beige;
+}
+html.plugin-pages.plugin-id-default .editorial {
+	@apply max-w-prose mx-auto py-12 px-4;
+}
+
+html.plugin-pages.plugin-id-default .submission_grid {
+	@apply grid grid-cols-1 md:grid-cols-2 py-12 px-4;
+}
+
+html.plugin-pages.plugin-id-default .submission_title {
+	@apply w-full text-pretty text-center py-4 font-montserrat font-bold flex justify-center items-center flex-col;
+}
+
+html.plugin-pages.plugin-id-default .submission_title img {
+	@apply max-w-32;
+}
+
+html.plugin-pages.plugin-id-default .submission_text {
+	@apply max-w-prose mx-auto py-12 px-4;
+}
+
+html.plugin-pages.plugin-id-default .submission_break {
+	@apply w-full h-24 bg-black;
+}
+
+footer .footer__logo {
+	@apply max-w-36;
+}
+
+/* /////////////////////// */
 /* base */
 
 @layer base {
@@ -816,10 +903,6 @@ html.plugin-blog.blog-post-page.plugin-id-default article img {
 
 	footer .container .footer__copyright {
 		@apply text-sm text-center max-w-prose text-pretty mx-auto;
-	}
-
-	footer .container img {
-		@apply max-w-32;
 	}
 
 	table {
