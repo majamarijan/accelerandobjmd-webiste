@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<svg width="72" height="72" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g class="layer">
+  <title>Layer 1</title>
+  <g id="color">
+   <path d="m19.64,44.88l20.94,1.58l19.06,7.56l0,-37.19l-18.12,7.95l-21.88,1.19l0,18.91z" fill="#ffffff" id="svg_1"/>
+   <path d="m19.64,45l0,-4.12s25.39,-0.5 40,8.55l0,4.6c-15.21,-10.43 -40,-9.15 -40,-9.15" fill="#d0cfce" id="svg_2"/>
+   <path d="m12.85,25.98l6.79,0l0,18.63l-6.79,0a2,2 0 0 1 -2,-2l0,-14.63a2,2 0 0 1 2,-2z" fill="#d22f27" id="svg_3"/>
+   <rect fill="#ea5a47" height="40.01" id="svg_4" rx="2" ry="2" width="6" x="59.64" y="15.29"/>
+   <path d="m21,44.92l0.63,4.03l-1.37,0l1.68,8.92l1.5,0l0.38,2.01l-6.47,0.08l-2.84,-15.04" fill="#9b9b9a" id="svg_5" transform="translate(-1.364)"/>
+   <path d="m10.85,28.79l-2.48,0a2,2 0 0 0 -2,2l0,8.92a2,2 0 0 0 2,2l2.48,0" fill="#ea5a47" id="svg_6"/>
+  </g>
+  <g id="line">
+   <path d="m19.64,25.98s24.79,1.29 40,-9.14" fill="none" id="svg_7" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+   <path d="m19.64,44.88s24.79,-1.29 40,9.14" fill="none" id="svg_8" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+   <path d="m12.85,25.98l6.79,0l0,18.63l-6.79,0a2,2 0 0 1 -2,-2l0,-14.63a2,2 0 0 1 2,-2z" fill="#3f7f00" id="svg_9" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="matrix(1 0 0 1 0 0)"/>
+   <rect fill="#3f7f00" height="40.01" id="svg_10" rx="2" ry="2" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="6" x="59.64" y="15.29"/>
+   <path d="m19.64,44.92l0.88,4.65l-1.5,0l1.56,8.3l0.5,0l0.38,2.01l-5.47,0.08l-2.84,-15.04" fill="#3f7f00" id="svg_11" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+   <path d="m19.64,25.98s24.79,1.29 40,-9.14" fill="none" id="svg_12" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+   <path d="m19.64,44.88s24.79,-1.29 40,9.14" fill="none" id="svg_13" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+   <path d="m10.85,28.79l-2.48,0a2,2 0 0 0 -2,2l0,8.92a2,2 0 0 0 2,2l2.48,0" fill="#bf0000" id="svg_14" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+   <line fill="none" id="svg_15" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.64" x2="16.64" y1="41" y2="41"/>
+  </g>
+ </g>
+</svg>

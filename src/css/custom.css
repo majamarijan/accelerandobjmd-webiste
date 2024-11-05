@@ -796,11 +796,11 @@ html.plugin-pages.plugin-id-default .editorial {
 }
 
 html.plugin-pages.plugin-id-default .submission_grid {
-	@apply grid grid-cols-1 md:grid-cols-2 py-12 px-4;
+	@apply grid grid-cols-1 md:grid-cols-2 pb-12 pt-20 px-4;
 }
 
 html.plugin-pages.plugin-id-default .submission_title {
-	@apply w-full text-pretty text-center py-4 font-montserrat font-bold flex justify-center items-center flex-col;
+	@apply w-full text-pretty text-center py-4 font-montserrat font-bold flex justify-start items-center flex-col;
 }
 
 html.plugin-pages.plugin-id-default .submission_title img {
@@ -808,15 +808,22 @@ html.plugin-pages.plugin-id-default .submission_title img {
 }
 
 html.plugin-pages.plugin-id-default .submission_text {
-	@apply max-w-prose mx-auto py-12 px-4;
+	@apply max-w-prose mx-auto px-4;
 }
 
 html.plugin-pages.plugin-id-default .submission_break {
 	@apply w-full h-24 bg-black;
 }
 
+footer.footer {
+	@apply text-center flex flex-col justify-center items-center gap-4 px-4 sm:px-8 min-h-[25vh] pt-20;
+}
+
 footer .footer__logo {
 	@apply max-w-36;
+}
+footer p {
+	@apply text-center mx-auto text-sm max-w-full;
 }
 
 /* /////////////////////// */
@@ -895,14 +902,6 @@ footer .footer__logo {
 
 	img {
 		@apply w-full;
-	}
-
-	footer {
-		@apply text-center flex flex-col justify-center items-center gap-4 px-4 sm:px-8;
-	}
-
-	footer .container .footer__copyright {
-		@apply text-sm text-center max-w-prose text-pretty mx-auto;
 	}
 
 	table {
