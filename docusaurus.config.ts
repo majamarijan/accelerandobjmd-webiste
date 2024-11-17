@@ -185,7 +185,7 @@ const config: Config = {
 		// Replace with your project's social card
 		image: 'img/LOGO_320.png',
 		zoom: {
-			selector: '.markdown .figureBox figure img',
+			selector: '.figureBox figure img',
 			background: {
 				dark: 'rgb(50, 50, 50)',
 				light: 'rgb(255, 255, 255)',
@@ -215,6 +215,17 @@ const config: Config = {
 					position: 'left',
 					label: 'Guidelines',
 					to: '/guidelines',
+				},
+				{
+					to: '/review-policy',
+					label: 'Review Policy',
+					position: 'left',
+					title: 'Review Policy',
+				},
+				{
+					position: 'left',
+					label: 'Ethics and Polices',
+					to: '/ethics',
 				},
 			],
 		},
@@ -248,7 +259,6 @@ const config: Config = {
 </g>
 </svg>
 <br /> This website is under ​Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) <br /> Belgrade Center for Music and Dance is the publisher of Accelerando: BJMD </p>`,
-			
 		},
 		prism: {
 			theme: prismThemes.github,

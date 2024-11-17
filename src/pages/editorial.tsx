@@ -3,10 +3,10 @@ import Wrapper from '../components/Layout/Layout';
 export default function About(): JSX.Element {
 	return (
 		<Wrapper title='Editorial Board' description='Editorial page'>
-			<div>
+			<div className='header-lg'>
 				<h1>Editorial Board</h1>
 			</div>
-			<div className='editorial'>
+			<div className='main'>
 				<div>
 					<h4>Editor in Chief</h4>
 					<p>

@@ -337,7 +337,8 @@ html.plugin-blog.blog-post-page article .markdown .text .figureBox {
 	@apply grid grid-cols-1 my-12 max-w-prose lg:max-w-full;
 }
 
-html.plugin-blog.blog-post-page article .markdown .text .figureBox figure {
+html.plugin-blog.blog-post-page article .markdown .text .figureBox figure,
+html.plugin-pages.plugin-id-default .figureBox figure {
 	@apply max-w-[250px] mx-auto m-0 grid grid-rows-[1fr_auto] place-items-stretch border border-solid border-slate-300 p-4;
 	img {
 		@apply object-cover w-full h-full rounded;
@@ -732,6 +733,16 @@ html.plugin-blog.blog-post-page.plugin-id-default article img {
 
 /* /////////////////////// */
 /* plugin-pages */
+
+html.plugin-pages.plugin-id-default div.header-lg {
+	@apply flex flex-col items-center justify-center min-h-[100vh] bg-carribean-green dark:bg-dark text-light;
+}
+
+
+html.plugin-pages.plugin-id-default div.header-lg h1 {
+	@apply text-3xl md:text-5xl lg:text-8xl;
+}
+
 html.plugin-pages.plugin-id-default ul {
 	@apply text-sm md:text-lg list-none;
 }
@@ -749,7 +760,7 @@ html.plugin-pages.plugin-id-default .about_navigation nav ul {
 }
 
 html.plugin-pages.plugin-id-default .about_header {
-	@apply h-[100vh] bg-azure dark:bg-dark text-light flex items-center px-8 sticky top-0;
+	@apply min-h-[100vh] bg-azure dark:bg-dark text-light flex items-center px-8 sticky top-0;
 }
 
 html.plugin-pages.plugin-id-default .about_header h1 {
@@ -791,8 +802,28 @@ html.plugin-pages.plugin-id-default .about_imageContainer img {
 html.plugin-pages.plugin-id-default .about_section {
 	@apply dark:bg-night dark:text-light grid grid-cols-1 md:grid-cols-2 grid-rows-[auto] relative z-10 gap-8 md:sticky md:top-0 px-8 min-h-[125vh] place-items-center place-content-center text-sm sm:text-base lg:text-lg bg-beige;
 }
-html.plugin-pages.plugin-id-default .editorial {
+html.plugin-pages.plugin-id-default .main {
 	@apply max-w-prose mx-auto py-12 px-4;
+}
+
+html.plugin-pages.plugin-id-default .page-section {
+	@apply py-12 max-w-4xl mx-auto;
+}
+
+html.plugin-pages.plugin-id-default .page-section .title-emphasis {
+	@apply py-4 bg-emerald dark:bg-beige/10 flex justify-center rounded;
+}
+
+html.plugin-pages.plugin-id-default .page-section .content {
+	@apply max-w-prose mx-auto py-8;
+}
+
+html.plugin-pages.plugin-id-default .main ul {
+	@apply list-disc pl-8;
+}
+
+html.plugin-pages.plugin-id-default .main ul li ul li {
+	@apply py-1 list-decimal;
 }
 
 html.plugin-pages.plugin-id-default .submission_grid {
