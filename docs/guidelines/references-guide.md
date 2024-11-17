@@ -89,5 +89,6 @@ Last Name, First Name. "Title." _Encyclopedia_. [Accessed date]. URL
 
 ### Term
 
-"Term." _Encyclopedia, edition, volume._ Editor. Publisher, Year.
-- "Chivalry". _Encyclopedia Britannica, ed.6, vol.6._ Ed. William Smellie. London: Archibald Constable and Company, 1823.
+"Term." _Encyclopedia Name_. Accessed date. URL
+- "Chivalry". _Encyclopedia Britannica_. Accessed August 30, 2024. https://www.britannica.com/topic/chivalry
+- In text: Chivalry ([Encyclopedia Britannica](https://www.britannica.com/topic/chivalry)) or [Chivalry](https://www.britannica.com/topic/chivalry)
