@@ -826,6 +826,20 @@ footer p {
 	@apply text-center mx-auto text-sm max-w-full;
 }
 
+/* plugin-docs */
+
+html.plugin-docs.plugin-id-default .markdown {
+	@apply md:max-w-prose mx-auto;
+}
+
+html.plugin-docs.plugin-id-default .markdown header {
+	@apply mb-8;
+}
+
+html.plugin-docs.plugin-id-default .markdown h4 {
+	@apply pt-4 mb-2;
+}
+
 /* /////////////////////// */
 /* base */
 
